@@ -1,7 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="RealTimeMsg" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="e64b7b8e-4787-44f6-a792-8e0d10962e16" name="Default" comment="" />
+    <list default="true" readonly="true" id="e64b7b8e-4787-44f6-a792-8e0d10962e16" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/target" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tuoming/UDP/SocketSend.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tuoming/common/CdrKind.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tuoming/common/RealTimeMsgAlg.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tuoming/test/receiveDemo.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tuoming/test/sendDemo.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tuoming/user/UserInfo.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tuoming/utils/CommonUtils.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tuoming/utils/ConfigArgs.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tuoming/utils/ParseEvery.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tuoming/utils/SimpleDateDeal.class" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/com/tuoming/Demo.java" afterPath="$PROJECT_DIR$/src/com/tuoming/Demo.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/tuoming/FileAnalyse/AnalysisFileThread.java" afterPath="$PROJECT_DIR$/src/com/tuoming/FileAnalyse/AnalysisFileThread.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/tuoming/RTMsgUploadDriver.java" afterPath="$PROJECT_DIR$/src/com/tuoming/RTMsgUploadDriver.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/tuoming/UDP/SocketSend.java" afterPath="$PROJECT_DIR$/src/com/tuoming/UDP/SocketSend.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/tuoming/common/FileDealUntil.java" afterPath="$PROJECT_DIR$/src/com/tuoming/common/FileDealUntil.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/tuoming/common/RealTimeMsgAlg.java" afterPath="$PROJECT_DIR$/src/com/tuoming/common/RealTimeMsgAlg.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/tuoming/signalling/IupsThread.java" afterPath="$PROJECT_DIR$/src/com/tuoming/signalling/IupsThread.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/tuoming/signalling/McThread.java" afterPath="$PROJECT_DIR$/src/com/tuoming/signalling/McThread.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/tuoming/signalling/MmeThread.java" afterPath="$PROJECT_DIR$/src/com/tuoming/signalling/MmeThread.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/tuoming/signalling/mc/McInfo.java" afterPath="$PROJECT_DIR$/src/com/tuoming/signalling/mc/McInfo.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/tuoming/test/receiveDemo.java" afterPath="$PROJECT_DIR$/src/com/tuoming/test/receiveDemo.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/tuoming/user/UserInfo.java" afterPath="$PROJECT_DIR$/src/com/tuoming/user/UserInfo.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/tuoming/utils/CommonUtils.java" afterPath="$PROJECT_DIR$/src/com/tuoming/utils/CommonUtils.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/tuoming/writeFile/WriteCountResult.java" afterPath="$PROJECT_DIR$/src/com/tuoming/writeFile/WriteCountResult.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -12,52 +46,103 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DealMethod.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tuoming/common/DealMethod.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="RTMsgUploadDriver.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tuoming/RTMsgUploadDriver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+            <state relative-caret-position="270">
+              <caret line="177" column="64" lean-forward="false" selection-start-line="177" selection-start-column="64" selection-end-line="177" selection-end-column="64" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MmeTauIndex.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/mme/MmeTauIndex.java">
+      <file leaf-file-name="McInfo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/mc/McInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+            <state relative-caret-position="440">
+              <caret line="33" column="42" lean-forward="false" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MmeTauInfo.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AnalysisFileThread.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tuoming/FileAnalyse/AnalysisFileThread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="38" column="27" lean-forward="true" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SocketSend.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/tuoming/UDP/SocketSend.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="51" column="39" lean-forward="true" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StreamInfo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tuoming/user/StreamInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RealTimeMsgAlg.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tuoming/common/RealTimeMsgAlg.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-604">
+              <caret line="46" column="105" lean-forward="false" selection-start-line="46" selection-start-column="105" selection-end-line="46" selection-end-column="105" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="receiveDemo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tuoming/test/receiveDemo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1566">
+              <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileInputStream.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/io/FileInputStream.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="149">
+              <caret line="194" column="0" lean-forward="false" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserInfo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tuoming/user/UserInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="62">
+              <caret line="228" column="18" lean-forward="false" selection-start-line="228" selection-start-column="18" selection-end-line="228" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MmeTauInfo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/mme/MmeTauInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="213" column="50" lean-forward="true" selection-start-line="213" selection-start-column="50" selection-end-line="213" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ParseEvery.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tuoming/utils/ParseEvery.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="136" column="23" selection-start-line="136" selection-start-column="23" selection-end-line="136" selection-end-column="23" />
-              <folding>
-                <element signature="e#4261#4262#0" expanded="true" />
-                <element signature="e#4301#4302#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MmeIndex.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/mme/MmeIndex.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+            <state relative-caret-position="47">
+              <caret line="46" column="48" lean-forward="true" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -76,85 +161,85 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>private</find>
-      <find>S1uhttpIndex</find>
-      <find>_Index</find>
-      <find>public</find>
-      <find>MmeIndex.getMmeIndex(</find>
-      <find>MmeTauIndex</find>
-      <find>IucsLocationIndex</find>
-      <find>split[MmeIndex.getMmeIndex(</find>
-      <find>, n)</find>
-      <find>MmeAttachDetachIndex</find>
-      <find>IupsRauIndex</find>
-      <find>System.out.println</find>
+      <find>protected</find>
+      <find>S1uHttpIndex</find>
+      <find>error</find>
     </findStrings>
     <replaceStrings>
       <replace>private</replace>
-      <replace>MmeIndex</replace>
       <replace>protected</replace>
-      <replace>MmeTauIndex</replace>
-      <replace>IupsRauIndex</replace>
-      <replace>IucsLocationIndex</replace>
-      <replace>IucsSwitchIndex</replace>
-      <replace>McRelocationIndex</replace>
-      <replace>IupsRelocationIndex</replace>
+      <replace>public</replace>
+      <replace>S1uGenIndex</replace>
+      <replace>S1uStreamIndex</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>C:\Users\Administrator\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar</dir>
+    </dirStrings>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/MmeTauIndex.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/MmeAttachDetachIndex.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/MmeIndex.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/MmeAttachDetachInfo.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/MMeInfo.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/MmeTauInfo.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/SignallingCommon.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/iucs/IucsLocationIndex.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/iucs/IucsLocationInfo.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/iucs/IucsSwitchInfo.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/Demo.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/mc/McRelocationIndex.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/mc/McRelocationInfo.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/DnsToRedis.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/mc/IucsSwitchInfo.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/mc/IucsLocationInfo.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/mc/McIndex.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/SignallingDeal.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/readfile/SigReadFile.java" />
+        <option value="$PROJECT_DIR$/resources/config.xml.fxml" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/Control/StartDownInfo.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/Control/AddressInfo.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/common/FlowType.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/common/CommonDecode.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/decode/S1uhttpIndex.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/decode/S1uhttpDecode.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/utils/TBCDUtil.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/utils/MD5Util.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/Driver.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/FileAnalyse/AnalysisThread.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/user/httpInfo.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/user/genInfo.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/user/S1uhttpIndex.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/utils/ParseEvery.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/user/S1uHttpIndex.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/user/S1uStreamIndex.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/utils/SimpleDateDeal.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/user/S1uGenIndex.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/user/HttpInfo.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/user/StreamInfo.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/test/sendDemo.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/UDP/SocketRecieve.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/utils/InitMapUtil.java" />
         <option value="$PROJECT_DIR$/src/com/tuoming/utils/UDMsgSendCount.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/utils/RedisUntil.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/RegionTableRedis.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/iups/IupsRauIndex.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/iups/IupsRelocationIndex.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/iups/IupsRauInfo.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/iups/IupsRelocationInfo.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/iups/IupsInfo.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/mc/McSwitchIndex.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/mc/McLocationIndex.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/mc/McLocationInfo.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/mc/Mc2LocationIndex.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/common/SortByTime.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/sort/SortDriver.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/Demo.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/sort/SortByTime.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/common/TypeChange.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/sort/SortEntity.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/common/CdrKind.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/writeFile/writeCountResult.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/user/GenInfo.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/common/PublicTableIndex.java" />
         <option value="$PROJECT_DIR$/resources/config.xml" />
         <option value="$PROJECT_DIR$/src/com/tuoming/utils/ConfigArgs.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/utils/RealTimeMsgCountUtil.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/writeFile/WriteCountResult.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/FileAnalyse/AnalysisFileThread.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/Demo.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/com/tuoming/RTMsgUploadDriver.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/utils/CommonUtils.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/test/receiveDemo.java" />
         <option value="$PROJECT_DIR$/src/com/tuoming/common/FileDealUntil.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/mme/MMeInfo.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/mme/MmeAttachDetachInfo.java" />
         <option value="$PROJECT_DIR$/src/com/tuoming/signalling/mc/McInfo.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/IupsThread.java" />
         <option value="$PROJECT_DIR$/src/com/tuoming/signalling/McThread.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/IupsThread.java" />
         <option value="$PROJECT_DIR$/src/com/tuoming/signalling/MmeThread.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/common/DealMethod.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/mc/Mc2LocationInfo.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/mc/McSwitchInfo.java" />
-        <option value="$PROJECT_DIR$/src/com/tuoming/signalling/mme/MmeTauInfo.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/user/UserInfo.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/common/RealTimeMsgAlg.java" />
+        <option value="$PROJECT_DIR$/src/com/tuoming/UDP/SocketSend.java" />
       </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="C:\Users\Administrator\.m2\repository" />
+        <option name="userSettingsFile" value="C:\Users\Administrator\.m2\settings.xml" />
+      </MavenGeneralSettings>
     </option>
   </component>
   <component name="MavenProjectNavigator">
@@ -169,29 +254,33 @@
           <item name="RealTimeMsgUpload" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="RealTimeMsgUpload" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
-        </path>
       </expand>
       <select />
     </treeState>
   </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.8" />
+  </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="10" />
-    <option name="y" value="10" />
-    <option name="width" value="1925" />
-    <option name="height" value="1085" />
+    <option name="x" value="4" />
+    <option name="width" value="1924" />
+    <option name="height" value="1013" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -202,6 +291,11 @@
             <path>
               <item name="RealTimeMsgUpload" type="b2602c69:ProjectViewProjectNode" />
               <item name="RealTimeMsgUpload" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RealTimeMsgUpload" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RealTimeMsgUpload" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -209,6 +303,34 @@
               <item name="RealTimeMsgUpload" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="tuoming" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RealTimeMsgUpload" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RealTimeMsgUpload" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tuoming" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RealTimeMsgUpload" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RealTimeMsgUpload" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tuoming" type="462c0819:PsiDirectoryNode" />
+              <item name="FileAnalyse" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RealTimeMsgUpload" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RealTimeMsgUpload" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tuoming" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RealTimeMsgUpload" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RealTimeMsgUpload" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tuoming" type="462c0819:PsiDirectoryNode" />
+              <item name="readfile" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RealTimeMsgUpload" type="b2602c69:ProjectViewProjectNode" />
@@ -223,31 +345,63 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="tuoming" type="462c0819:PsiDirectoryNode" />
               <item name="signalling" type="462c0819:PsiDirectoryNode" />
-              <item name="mme" type="462c0819:PsiDirectoryNode" />
+              <item name="mc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RealTimeMsgUpload" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="RealTimeMsgUpload" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tuoming" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RealTimeMsgUpload" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RealTimeMsgUpload" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tuoming" type="462c0819:PsiDirectoryNode" />
+              <item name="UDP" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RealTimeMsgUpload" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RealTimeMsgUpload" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tuoming" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RealTimeMsgUpload" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RealTimeMsgUpload" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tuoming" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="maven&#9;ACTION&#9;ActivateMavenProjectsToolWindow" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.25085518" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../URepeator" />
+    <property name="SearchEverywhereHistoryKey" value="maven&#9;ACTION&#9;Maven.ExecuteGoal&#10;mav&#9;ACTION&#9;Maven.ExecuteGoal" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.tuoming.signalling" />
-      <recent name="com.tuoming.signalling.mc" />
-      <recent name="com.tuoming.signalling.iucs" />
-      <recent name="com.tuoming.signalling.iups" />
       <recent name="com.tuoming.user" />
+      <recent name="com.tuoming.utils" />
+      <recent name="com.tuoming.decode" />
+      <recent name="com.tuoming.common" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\dd\工作资料\RealTimeMsgUpload\src\com\tuoming\common" />
+      <recent name="F:\dd\工作资料\RealTimeMsgUpload\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -262,69 +416,126 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MmeThread">
+  <component name="RunManager" selected="Application.driver">
     <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
     </configuration>
-    <configuration name="Demo (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.tuoming.signalling.Demo" />
-      <module name="RealTimeMsgUpload" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
+    <configuration name="ConfigArgs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.tuoming.signalling.*" />
+          <option name="PATTERN" value="com.tuoming.utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-    </configuration>
-    <configuration name="FileDealUntil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.tuoming.common.FileDealUntil" />
-      <module name="RealTimeMsgUpload" />
+      <option name="MAIN_CLASS_NAME" value="com.tuoming.utils.ConfigArgs" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="RealTimeMsgUpload" />
+      <envs />
+    </configuration>
+    <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.tuoming.common.*" />
+          <option name="PATTERN" value="com.tuoming.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-    </configuration>
-    <configuration name="MmeThread" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.tuoming.signalling.MmeThread" />
-      <module name="RealTimeMsgUpload" />
+      <option name="MAIN_CLASS_NAME" value="com.tuoming.Demo" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tuoming.signalling.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="SortByTime" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.tuoming.sort.SortByTime" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
       <module name="RealTimeMsgUpload" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tuoming.sort.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="SortEntity" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.tuoming.sort.SortEntity" />
-      <module name="RealTimeMsgUpload" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tuoming.sort.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <envs />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration name="driver" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.tuoming.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.tuoming.RTMsgUploadDriver" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="F:\dpi\http F:\dpi\gen F:\dpi\stream" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="RealTimeMsgUpload" />
+      <envs />
+    </configuration>
+    <configuration name="receiveDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.tuoming.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.tuoming.test.receiveDemo" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="RealTimeMsgUpload" />
+      <envs />
+    </configuration>
+    <configuration name="sendDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.tuoming.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.tuoming.test.sendDemo" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="RealTimeMsgUpload" />
+      <envs />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" />
@@ -334,13 +545,24 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
+      <envs />
       <patterns />
     </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
@@ -353,35 +575,74 @@
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
       <option name="USE_DEFAULT_REPORTERS" value="false" />
       <option name="PROPERTIES_FILE" />
+      <envs />
       <properties />
       <listeners />
     </configuration>
-    <list>
-      <item itemvalue="Application.Demo (1)" />
-      <item itemvalue="Application.SortByTime" />
-      <item itemvalue="Application.SortEntity" />
-      <item itemvalue="Application.FileDealUntil" />
-      <item itemvalue="Application.MmeThread" />
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Application.ConfigArgs" />
+      <item index="1" class="java.lang.String" itemvalue="Application.driver" />
+      <item index="2" class="java.lang.String" itemvalue="Application.receiveDemo" />
+      <item index="3" class="java.lang.String" itemvalue="Application.sendDemo" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Demo" />
     </list>
     <recent_temporary>
-      <list>
-        <item itemvalue="Application.MmeThread" />
-        <item itemvalue="Application.FileDealUntil" />
-        <item itemvalue="Application.SortEntity" />
-        <item itemvalue="Application.SortByTime" />
-        <item itemvalue="Application.Demo (1)" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.driver" />
+        <item index="1" class="java.lang.String" itemvalue="Application.receiveDemo" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Demo" />
+        <item index="3" class="java.lang.String" itemvalue="Application.sendDemo" />
+        <item index="4" class="java.lang.String" itemvalue="Application.ConfigArgs" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SbtLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
   <component name="SvnConfiguration" cleanupOnStartRun="true">
-    <configuration>C:\Users\guofeng\AppData\Roaming\Subversion</configuration>
+    <configuration>C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
     <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="F:\dd\worksouce\RealTimeMsgUpload" />
+          <option name="myCopyRoot" value="F:\dd\worksouce\RealTimeMsgUpload" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="F:\dd\worksouce\RealTimeMsgUpload\.idea" />
+          <option name="myCopyRoot" value="F:\dd\worksouce\RealTimeMsgUpload\.idea" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="F:\dd\worksouce\RealTimeMsgUpload" />
+          <option name="myCopyRoot" value="F:\dd\worksouce\RealTimeMsgUpload" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -391,376 +652,471 @@
       <option name="presentableId" value="Default" />
       <updated>1574070707222</updated>
     </task>
+    <task id="LOCAL-00001" summary="更新版本">
+      <created>1574646975555</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1574646975555</updated>
+    </task>
+    <task id="LOCAL-00002" summary="更新版本">
+      <created>1574652312598</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1574652312598</updated>
+    </task>
+    <task id="LOCAL-00003" summary="更新版本:修改userinfo">
+      <created>1574664647681</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1574664647681</updated>
+    </task>
+    <task id="LOCAL-00004" summary="更新版本:修改大部分类">
+      <created>1574852559306</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1574852559306</updated>
+    </task>
+    <task id="LOCAL-00005" summary="更新版本:修改大部分类">
+      <created>1575354186380</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1575354186381</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1098" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.39172414" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" visible="true" weight="0.1529948" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.077241376" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21744792" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32965517" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32964602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14823009" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21137339" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39933628" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="更新版本" />
+    <MESSAGE value="更新版本:修改userinfo" />
+    <MESSAGE value="更新版本:修改大部分类" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新版本:修改大部分类" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="13" />
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="realMsgList" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/softWare/JDK/jdk8/src.zip!/java/lang/Thread.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/net/DatagramPacket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="459" column="11" selection-start-line="459" selection-start-column="11" selection-end-line="459" selection-end-column="11" />
+        <state relative-caret-position="-314">
+          <caret line="261" column="29" lean-forward="false" selection-start-line="261" selection-start-column="29" selection-end-line="261" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/common/CdrKind.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/3.0.0/jedis-3.0.0.jar!/redis/clients/jedis/Jedis.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        <state relative-caret-position="286">
+          <caret line="131" column="18" lean-forward="false" selection-start-line="131" selection-start-column="18" selection-end-line="131" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/softWare/JDK/jdk8/src.zip!/java/io/File.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/common/PublicTableIndex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="1384" column="19" selection-start-line="1384" selection-start-column="19" selection-end-line="1384" selection-end-column="19" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/FileAnalyse/AnalysisFileThread.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/common/ReadPublicTable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="94" column="30" lean-forward="true" selection-start-line="94" selection-start-column="30" selection-end-line="94" selection-end-column="30" />
+        <state relative-caret-position="277">
+          <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/softWare/JDK/jdk8/src.zip!/java/util/LinkedList.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/utils/RealTimeMsgCountUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="505" column="16" selection-start-line="505" selection-start-column="16" selection-end-line="505" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/mc/McLocationIndex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/sort/InterfaceIndex.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/Demo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/index/S1uDNSIndex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/readfile/S1uDNSReadFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="41" column="52" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/iups/IupsRauIndex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/utils/RedisUntil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="115" column="23" selection-start-line="115" selection-start-column="23" selection-end-line="115" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/readfile/ReadFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-135">
-          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="12" column="15" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/common/RealTimeMsgAlg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-81">
-          <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/utils/ConfigArgs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2130">
-          <caret line="76" column="33" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
+        <state relative-caret-position="2788">
+          <caret line="140" column="22" lean-forward="false" selection-start-line="140" selection-start-column="22" selection-end-line="140" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/iups/IupsRelocationInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4710">
-          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+        <state relative-caret-position="-1836">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/iups/IupsRauInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-981">
-          <caret line="79" column="17" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/sort/SortEntity.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/sort/SortDriver.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/sort/SortByTime.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/RegionTableRedis.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/common/FileDealUntil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="45" column="5" lean-forward="true" selection-start-line="34" selection-start-column="3" selection-end-line="45" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/softWare/JDK/jdk8/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="1501" column="15" selection-start-line="1501" selection-start-column="15" selection-end-line="1501" selection-end-column="15" />
-          <folding>
-            <element signature="e#58481#58482#0" expanded="true" />
-            <element signature="e#58518#58519#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/DnsToRedis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/writeFile/WriteCountResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/Demo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/UDP/SocketSend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="43" column="23" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/mme/MMeInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/mme/MmeAttachDetachInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1290">
-          <caret line="52" column="86" selection-start-line="52" selection-start-column="86" selection-end-line="52" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/readfile/SigReadFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="2038">
+          <caret line="87" column="18" lean-forward="false" selection-start-line="87" selection-start-column="18" selection-end-line="87" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/SignallingCommon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        <state relative-caret-position="54">
+          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/SignallingDeal.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/mme/MmeAttachDetachInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/mc/Mc2LocationIndex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+        <state relative-caret-position="5346">
+          <caret line="205" column="13" lean-forward="false" selection-start-line="205" selection-start-column="13" selection-end-line="205" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/iups/IupsInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        <state relative-caret-position="81">
+          <caret line="3" column="25" lean-forward="false" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/mc/McInfo.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/readfile/SigReadFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+        <state relative-caret-position="216">
+          <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/IupsThread.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/utils/ConfigArgs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="997">
-          <caret line="64" column="32" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
+        <state relative-caret-position="81">
+          <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/McThread.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/RegionTableRedis.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/Integer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="66" column="32" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
+        <state relative-caret-position="-820">
+          <caret line="531" column="22" lean-forward="false" selection-start-line="531" selection-start-column="22" selection-end-line="531" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/MmeThread.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/writeFile/WriteCountResult.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="64" column="32" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
+        <state relative-caret-position="0">
+          <caret line="0" column="30" lean-forward="false" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/mc/McLocationInfo.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/Demo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="71" column="88" selection-start-line="71" selection-start-column="88" selection-end-line="71" selection-end-column="88" />
+        <state relative-caret-position="162">
+          <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/RTMsgUploadDriver.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/DnsToRedis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+        <state relative-caret-position="135">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/common/TypeChange.java">
+    <entry file="file://$PROJECT_DIR$/target/maven-archiver/pom.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="44" column="26" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/mc/McSwitchIndex.java">
+    <entry file="file://$PROJECT_DIR$/RealTimeMsgUpload.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+        <state relative-caret-position="-455">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dependency-reduced-pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2106">
+          <caret line="78" column="10" lean-forward="false" selection-start-line="78" selection-start-column="10" selection-end-line="78" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3834">
+          <caret line="142" column="59" lean-forward="false" selection-start-line="142" selection-start-column="59" selection-end-line="142" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/SignallingDeal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/config.xml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/mc/Mc2LocationInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="72" column="54" selection-start-line="72" selection-start-column="54" selection-end-line="72" selection-end-column="54" />
+        <state relative-caret-position="-1411">
+          <caret line="46" column="48" lean-forward="false" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/mc/McSwitchInfo.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="73" column="44" lean-forward="true" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="44" />
+        <state relative-caret-position="24840">
+          <caret line="975" column="19" lean-forward="false" selection-start-line="975" selection-start-column="19" selection-end-line="975" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/common/DealMethod.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/utils/RedisUntil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+        <state relative-caret-position="1998">
+          <caret line="78" column="25" lean-forward="false" selection-start-line="78" selection-start-column="25" selection-end-line="78" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/mme/MmeTauIndex.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/test/sendDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        <state relative-caret-position="-546">
+          <caret line="23" column="33" lean-forward="false" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/mme/MmeIndex.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/utils/CommonUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        <state relative-caret-position="448">
+          <caret line="72" column="11" lean-forward="true" selection-start-line="72" selection-start-column="11" selection-end-line="72" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/utils/TBCDUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2457">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tuoming/utils/ParseEvery.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="136" column="23" selection-start-line="136" selection-start-column="23" selection-end-line="136" selection-end-column="23" />
-          <folding>
-            <element signature="e#4261#4262#0" expanded="true" />
-            <element signature="e#4301#4302#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1512">
+          <caret line="61" column="25" lean-forward="false" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4995">
+          <caret line="211" column="6" lean-forward="false" selection-start-line="211" selection-start-column="6" selection-end-line="211" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/utils/InitMapUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/common/FileDealUntil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1134">
+          <caret line="45" column="5" lean-forward="false" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/utils/MD5Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="972">
+          <caret line="37" column="40" lean-forward="false" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/user/GenInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/user/HttpInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1188">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/McThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="71" column="32" lean-forward="false" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/IupsThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="70" column="32" lean-forward="true" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/MmeThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="43" column="48" lean-forward="true" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/mme/MMeInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="23" column="37" lean-forward="false" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/mme/MmeTauInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="213" column="50" lean-forward="true" selection-start-line="213" selection-start-column="50" selection-end-line="213" selection-end-column="50" />
+        <state relative-caret-position="47">
+          <caret line="46" column="48" lean-forward="true" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/mc/McSwitchInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="46" column="19" lean-forward="false" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/user/StreamInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/signalling/mc/McInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="33" column="42" lean-forward="false" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/user/UserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="228" column="18" lean-forward="false" selection-start-line="228" selection-start-column="18" selection-end-line="228" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/io/FileInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="194" column="0" lean-forward="false" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/RTMsgUploadDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="177" column="64" lean-forward="false" selection-start-line="177" selection-start-column="64" selection-end-line="177" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/FileAnalyse/AnalysisFileThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="38" column="27" lean-forward="true" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/test/receiveDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1566">
+          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/common/RealTimeMsgAlg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-604">
+          <caret line="46" column="105" lean-forward="false" selection-start-line="46" selection-start-column="105" selection-end-line="46" selection-end-column="105" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tuoming/UDP/SocketSend.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="51" column="39" lean-forward="true" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -770,10 +1126,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>RealTimeMsg</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.25085518" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -793,11 +1151,11 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Python 3.5 interpreter library</last-edited>
+          <last-edited>lib</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.25085518" />
               </list>
             </option>
           </splitter-proportions>
@@ -833,12 +1191,17 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.51216817" />
+                <option value="0.25085518" />
               </list>
             </option>
           </splitter-proportions>
         </settings>
       </state>
     </states>
+  </component>
+  <component name="mavenExecuteGoalHistory">
+    <option value="$PROJECT_DIR$" />
+    <option value="clean compile install package" />
+    <option value="clean compile package" />
   </component>
 </project>

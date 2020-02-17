@@ -71,7 +71,7 @@ public class McSwitchInfo extends SignallingCommon {
             mscVlr = TypeChange.strToLong(TypeChange.getAfter5(split[McSwitchIndex.mscVlr]));
             roamType = TypeChange.strToInteger(TypeChange.getAfter5(split[McSwitchIndex.roamType]));
             if (roamType == null) {
-                roamType = DealMethod.setRoamType(imsi);
+                roamType = DealMethod.setRoamType(msisdn);
             } else {
                 if (roamType == 1 || roamType == 2) {
                     roamType = 1;

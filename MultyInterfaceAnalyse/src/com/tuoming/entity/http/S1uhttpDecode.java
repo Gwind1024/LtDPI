@@ -121,7 +121,7 @@ public class S1uhttpDecode extends CommonDecode implements Serializable {
     }
 
     public void getMSISDN(String[] str, int msisdn_Index) {
-        this.msisdn=SimpleDateDeal.Except86(str[msisdn_Index]) ;
+        this.msisdn = str[msisdn_Index];
     }
 
     public void getIMEI(String[] str, int imei_Index) {
@@ -141,8 +141,8 @@ public class S1uhttpDecode extends CommonDecode implements Serializable {
         this.cgiECI = str[cgiECI_Index];
     }
 
-    public void getSERVNAME(String[] str,int servname_type_Index, int servname_Index) {
-        this.servname = typeDecode.SERVNAME(str[servname_type_Index]+"_"+str[servname_Index]);
+    public void getSERVNAME(String[] str, int servname_Index) {
+        this.servname = typeDecode.SERVNAME(str[servname_Index]);
     }
 
     public void getDURITION(String[] str, int durition_Index) {
@@ -166,14 +166,8 @@ public class S1uhttpDecode extends CommonDecode implements Serializable {
     }
 
     public void getCDRSTAT(String[] str, int cdrstat_Index) {
-        String temp = str[cdrstat_Index];
-        if(temp =="0" || temp=="1"|| temp=="2") {
-            this.cdrstat = str[cdrstat_Index];
-        }
-        else{
-            this.cdrstat = "";
-        }
-        if(str[51].equals("2")) this.cdrstat = "3";
+        this.cdrstat = str[cdrstat_Index];
+        if (str[52] == "2") this.cdrstat = "3";
     }
 
     public void getULDURARION(String[] str, int ulDURARION_Index) {
@@ -461,7 +455,7 @@ public class S1uhttpDecode extends CommonDecode implements Serializable {
         getRAC(str, S1uhttpIndex.rac_Index);
         getLACTAC(str, S1uhttpIndex.lacTAC_Index);
         getCGIECI(str, S1uhttpIndex.cgiECI_Index);
-        getSERVNAME(str,S1uhttpIndex.servname_type_Index, S1uhttpIndex.servname_Index);
+        getSERVNAME(str, S1uhttpIndex.servname_Index);
         getDURITION(str, S1uhttpIndex.durition_Index);
         getULTRAFF(str, S1uhttpIndex.ulTRAFF_Index);
         getDLTRAFF(str, S1uhttpIndex.dlTRAFF_Index);
@@ -534,7 +528,6 @@ public class S1uhttpDecode extends CommonDecode implements Serializable {
         getWEBAPP(str, S1uhttpIndex.webAPP_Index);
         getREQUESTQUERYDOMAIN(str, S1uhttpIndex.requestQUERYDOMAIN_Index);
         getSGWGGSNIPAdd(str, S1uhttpIndex.sgwGGSNIPAdd_Index);
-        getvenderSERTYPE(str);
     }
 
     @Override

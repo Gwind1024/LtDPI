@@ -131,8 +131,8 @@ public class S1uhttpsDecode extends CommonDecode implements Serializable {
 	public void getCGIECI(String[] str,int cgiECI_Index) {
 		this.cgiECI=str[cgiECI_Index];
 	}
-	public void getSERVNAME(String[] str,int servname_type_Index, int servname_Index) {
-		this.servname = typeDecode.SERVNAME(str[servname_type_Index]+"_"+str[servname_Index]);
+	public void getSERVNAME(String[] str,int servname_Index) {
+		this.servname= typeDecode.SERVNAME(str[servname_Index]) ;
 	}
 	public void getDURITION(String[] str,int durition_Index) {
 		this.durition=SimpleDateDeal.diff(str[20],str[19]);
@@ -157,7 +157,7 @@ public class S1uhttpsDecode extends CommonDecode implements Serializable {
 		else{
 			this.cdrstat = "";
 		}
-		if(str[51].equals("2")) this.cdrstat = "3";
+		if(str[51] == "2") this.cdrstat = "3";
 	}
 	public void getULDURARION(String[] str,int ulDURARION_Index) {
 		this.ulDURARION=SimpleDateDeal.divide(str[ulDURARION_Index],"1000");
@@ -220,10 +220,7 @@ public class S1uhttpsDecode extends CommonDecode implements Serializable {
 		this.ipSGW=str[ipSGW_Index];
 	}
 	public void getMCC(String[] str,int mcc_Index) {
-		if(str[mcc_Index].equals("65535") || str[mcc_Index].equals(""))
-			this.mcc = "";
-		else
-			this.mcc=str[mcc_Index].substring(0,3);
+		this.mcc=str[mcc_Index].substring(0,3);
 	}
 	public void getMNC(String[] str,int mnc_Index) {
 		this.mnc="01";
@@ -306,11 +303,11 @@ public class S1uhttpsDecode extends CommonDecode implements Serializable {
 		this.l7DOWNTRAFFIC=str[l7DOWNTRAFFIC_Index];
 	}
 	public void getL7TRANSTIME(String[] str,int l7TRANSTIME_Index) {
-		if(str[29].equals( "0"))
+		if(str[29] == "0")
 		{
-			this.l7TRANSTIME=SimpleDateDeal.diff( SimpleDateDeal.big(str[77],str[78]),str[89]);
+			this.l7TRANSTIME=SimpleDateDeal.diff( SimpleDateDeal.big(str[78],str[79]),str[90]);
 		}
-		else if(str[29].equals("1"))
+		else if(str[29] == "0")
 		{
 			this.l7TRANSTIME=SimpleDateDeal.diff( str[20],str[19]);
 		}
@@ -371,7 +368,7 @@ public class S1uhttpsDecode extends CommonDecode implements Serializable {
 		this.webAPP="2";
 	}
 	public void getREQUESTQUERYDOMAIN(String[] str,int requestQUERYDOMAIN_Index) {
-		this.requestQUERYDOMAIN=this.host;
+		this.requestQUERYDOMAIN=str[requestQUERYDOMAIN_Index];
 	}
 	public void getvenderSERTYPE(String[] str) {
 		this.venderSERTYPE=str[22]+"#"+str[23];
@@ -393,7 +390,7 @@ public class S1uhttpsDecode extends CommonDecode implements Serializable {
 		getRAC(str,S1uhttpsIndex.rac_Index);
 		getLACTAC(str,S1uhttpsIndex.lacTAC_Index);
 		getCGIECI(str,S1uhttpsIndex.cgiECI_Index);
-		getSERVNAME(str,S1uhttpsIndex.servname_type_Index,S1uhttpsIndex.servname_Index);
+		getSERVNAME(str,S1uhttpsIndex.servname_Index);
 		getDURITION(str,S1uhttpsIndex.durition_Index);
 		getULTRAFF(str,S1uhttpsIndex.ulTRAFF_Index);
 		getDLTRAFF(str,S1uhttpsIndex.dlTRAFF_Index);

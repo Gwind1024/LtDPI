@@ -5,7 +5,6 @@ import com.tuoming.entity.s10s11.S10_S11Decode;
 import com.tuoming.entity.s10s11.S10_S11Index;
 import com.tuoming.readfile.ReadFile;
 import com.tuoming.readfile.S10S11ReadFile;
-import com.tuoming.redis.RedisThread;
 import com.tuoming.sort.SortEntity;
 import com.tuoming.writefile.Write;
 import com.tuoming.writefile.WriteIndex;
@@ -72,8 +71,6 @@ public class S10S11Analyse {
         HashMap<String, Write> writeMap = new HashMap<>();
 
         int sortOutTimeCount = 0;
-
-        new Thread(new RedisThread()).start();
 
         while (true) {
             //列出所有可用文件（.csv结尾）文件

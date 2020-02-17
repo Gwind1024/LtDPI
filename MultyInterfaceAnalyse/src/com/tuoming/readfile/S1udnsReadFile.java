@@ -17,7 +17,7 @@ public class S1udnsReadFile extends ReadFile {
             br = new BufferedReader(fis);
             while ((line = br.readLine()) != null) {
                 SortEntity sortEntity = new SortEntity();
-                boolean flag = sortEntity.createNumEntity(line, S1udnsIndex.starttime_Index, S1udnsIndex.size);
+                boolean flag = sortEntity.createNumEntity(line, S1udnsIndex.endtime_Index, S1udnsIndex.size);
                 if (flag) {
                     insertSort(sortEntity);
                 }

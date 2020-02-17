@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="relation">
-    <output-path>$PROJECT_DIR$/out/artifacts/relation</output-path>
-    <root id="archive" name="relation.jar">
-      <element id="module-output" name="MuiltyInerfaceRelation" />
-    </root>
-  </artifact>
-</component>

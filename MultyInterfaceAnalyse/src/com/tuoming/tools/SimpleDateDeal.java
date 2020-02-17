@@ -111,7 +111,7 @@ public class SimpleDateDeal {
         if(s1.equals(""))s1="0";
         if(s2.equals(""))s2="0";
         try{
-            if(s1.equals("") || s2.equals("0") ) return "0";
+            if(s2.equals("") || s2.equals("0") ) return "0";
             return String.valueOf(Integer.valueOf(s1)/Integer.valueOf(s2));
         }catch(Exception e){
             System.err.println("数字转换错误！s1="+s1+";s2="+s2);
@@ -124,11 +124,11 @@ public class SimpleDateDeal {
         if(s1.equals(""))s1="0";
         if(s2.equals(""))s2="0";
         try{
-            if(Long.valueOf(s1)>Long.valueOf(s2)) {
-                return s1;
+            if(Integer.valueOf(s1)>Integer.valueOf(s2)) {
+                return String.valueOf(Integer.valueOf(s1));
             }
             else{
-                return s2;
+                return String.valueOf(Integer.valueOf(s2));
             }
         }catch(Exception e){
             System.err.println("数字转换错误！s1="+s1+";s2="+s2);

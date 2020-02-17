@@ -53,9 +53,6 @@ public abstract class Write implements Serializable {
     protected String getFileSign() {
         String result = "";
         int i = 0;
-        if (fileSignCount > 99999) {
-            fileSignCount = 0;
-        }
         int l = fileSignCount.toString().length();
         while (i < 5 - l) {
             result += "0";

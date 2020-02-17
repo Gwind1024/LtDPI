@@ -31,7 +31,7 @@ public class WriteFile {
         try {
             bw.write(line);
             bw.newLine();
-//            bw.flush();
+            bw.flush();
             //字符串长度和换行长度
             count += (line.length() + 2);
         } catch (IOException e) {

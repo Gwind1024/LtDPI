@@ -8,7 +8,6 @@ import redis.clients.jedis.Jedis;
  */
 public class MMeInfo {
     public static byte[] mmeTobytes(String str, Jedis jedis) {
-
         String[] split = str.split(MmeIndex.splite, -1);
         if (split.length < MmeIndex.size) {
             return null;

@@ -45,11 +45,6 @@ public class RTMsgUploadDriver {
             System.exit(0);
         }
         logger.info(Thread.currentThread().getName() + "启动!");
-        /*if (args.length < 1) {
-            logger.error("【Parameter】:http输入目录、gen输入目录、stream输入目录、……");
-            logger.error("【Example  】:F:/dataDemo/httpInput、F:/dataDemo/genInput、F:/dataDemo/streamInput、……");
-            System.exit(0);
-        }*/
         long time = System.currentTimeMillis();
         //配置文件
         File conf = new File("resources/config.xml");
@@ -148,8 +143,8 @@ public class RTMsgUploadDriver {
             udpMsgCountMap.put(CdrKind.USER,userSendCount);
         }*/
 
-        Jedis redis = RedisUntil.getRedis(configArgs.redisAddr, configArgs.redisPassword);
-
+//        Jedis redis = RedisUntil.getRedis(configArgs.redisAddr, configArgs.redisPassword);
+        Jedis redis = null;
         //启动消息发送线程
         SocketSend socketSend = new SocketSend(realMsgList, configArgs.sendLocalPort, configArgs.sendPort, configArgs.sendIPAddr, udpMsgCountMap);
         Thread sochetSendThread = new Thread(socketSend);
@@ -175,12 +170,12 @@ public class RTMsgUploadDriver {
         }
 
         if (http_flag) {
-            AnalysisFileThread analysisFileThread = new AnalysisFileThread(httpFile, realMsgList, CdrKind.HTTP, flowMap, userSendCount, redis);
+            AnalysisFileThread analysisFileThread = new AnalysisFileThread(httpFile, realMsgList, CdrKind.HTTP, flowMap, userSendCount);
             new Thread(analysisFileThread).start();
 //            http_flag = false;
         }
         if (gen_flag) {
-            AnalysisFileThread analysisFileThread = new AnalysisFileThread(genFile, realMsgList, CdrKind.GEN, flowMap, userSendCount);
+            AnalysisFileThread analysisFileThread = new AnalysisFileThread(genFile, realMsgList, CdrKind.GEN, flowMap, userSendCount, redis);
             new Thread(analysisFileThread).start();
 //            gen_flag = false;
         }

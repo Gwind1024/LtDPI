@@ -168,7 +168,7 @@ public class S6aDecode extends CommonDecode {
 
     @Override
     public String toString() {
-        RedisUntil.setToMap(this);
+        RedisUntil.setRedis(this);
         /**
          * mmeAddress + "|" + mmePort + "|" + hssAddress + "|" + hssPort + "|" + originRealm + "|" + desRealm +
          *                 "|" + originHost + "|" + desHost + "|" + procType + "|" + appId + "|" + sgsnNumber + "|" + apn + "|" + subscriberStatus + "|" + subData + "|" + cause +

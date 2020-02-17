@@ -100,7 +100,7 @@ public class S1uimDecode extends CommonDecode {
 		this.l7DOWNTRAFFIC=SimpleDateDeal.sum(this.l7DOWNTRAFFIC,str[l7DOWNTRAFFIC_Index]);
 	}
 	public void getL7TRANSTIME(String[] str,int l7TRANSTIME_Index){
-		this.l7TRANSTIME=SimpleDateDeal.sum(this.l7TRANSTIME,SimpleDateDeal.diff(str[20],str[19]) );
+		this.l7TRANSTIME=SimpleDateDeal.sum(this.l7TRANSTIME,SimpleDateDeal.diff(str[S1uimIndex.endT_Index],str[S1uimIndex.startT_Index]) );
 	}
 	public void getTCPULRESTTRAF(String[] str,int tcpULRESTTRAF_Index,int mss){
 		this.tcpULRESTTRAF=SimpleDateDeal.sum(this.tcpULRESTTRAF,
@@ -164,7 +164,7 @@ public class S1uimDecode extends CommonDecode {
 		ipENB="";//SGSN IP/eNB IP
 		ipSGW="";//GGSN IP/S-GW IP
 		mcc="";//MCC
-		//mnc="";//MNC
+		mnc="";//MNC
 		portUSER="";//源端口
 		portSERV="";//目的端口
 		feature="";//网址/特征信息
@@ -183,15 +183,15 @@ public class S1uimDecode extends CommonDecode {
 		latiGPS="";//GPS纬度
 		heightGPS="";//高度
 		accurGPS="";//精度
-		//coordi="";//坐标系
+		coordi="";//坐标系
 		tcpULRESTTRAF="";//上行TCP重传流量
 		tcpDLRESTTRAF="";//下行TCP重传流量
-		//webAPP="";//区分网页流量/APP流量
+		webAPP="";//区分网页流量/APP流量
 		actTYPE="";//业务动作
 		actSTTIME="";//动作开始时间
 		actENDTIME="";//动作结束时间
 		imaction="";//IM登陆标识
-		//imresult="";//IM登陆结果
+		imresult="";//IM登陆结果
 		imdelay="";//IM登陆时延
 	}
 
@@ -213,7 +213,6 @@ public class S1uimDecode extends CommonDecode {
 			{
 				getL7UPTRANSTIME(str,91);
 				getL7DOWNTRANSTIME(str,92);
-				getL7TRANSTIME(str,S1uimIndex.l7TRANSTIME_Index);
 			}
 		}
 		pubDecodeEnd(list);
@@ -224,7 +223,7 @@ public class S1uimDecode extends CommonDecode {
         this.startT = list.get(0)[S1uimIndex.startT_Index];
         this.endT = list.get(list.size()-1)[S1uimIndex.endT_Index];
         this.imsi = list.get(0)[S1uimIndex.imsi_Index];
-        this.msisdn = SimpleDateDeal.Except86(list.get(0)[S1uimIndex.msisdn_Index]);
+        this.msisdn = list.get(0)[S1uimIndex.msisdn_Index];
         this.imei = list.get(0)[S1uimIndex.imei_Index];
         this.accountID = list.get(0)[S1uimIndex.accountID_Index];
         this.lacTAC=SimpleDateDeal.leftSupply0(list.get(0)[S1uimIndex.lacTAC_Index],5);
@@ -233,8 +232,8 @@ public class S1uimDecode extends CommonDecode {
         this.startT = SimpleDateDeal.getFormatDate(this.startT);
         this.endT = SimpleDateDeal.getFormatDate(this.endT);
         this.rat = list.get(0)[S1uimIndex.rat_Index];
-        this.ipUSER=list.get(0)[S1uimIndex.ipUSER_Index].equals("")?list.get(0)[S1uimIndex.ipUSER_Index2]:list.get(0)[S1uimIndex.ipUSER_Index];
-        this.ipSERV=list.get(0)[S1uimIndex.ipSERV_Index].equals("")?list.get(0)[S1uimIndex.ipSERV_Index2]:list.get(0)[S1uimIndex.ipSERV_Index];
+        this.ipUSER=list.get(0)[S1uimIndex.ipUSER_Index2].equals("")?list.get(0)[S1uimIndex.ipUSER_Index]:list.get(0)[S1uimIndex.ipUSER_Index2];
+        this.ipSERV=list.get(0)[S1uimIndex.ipSERV_Index2].equals("")?list.get(0)[S1uimIndex.ipSERV_Index]:list.get(0)[S1uimIndex.ipSERV_Index2];
         this.l4TYPE = list.get(0)[S1uimIndex.l4TYPE_Index];
         this.durTCP1ST = list.get(0)[S1uimIndex.durTCP1ST_Index];
         this.durTCP2ND = list.get(0)[S1uimIndex.durTCP2ND_Index];
@@ -269,8 +268,7 @@ public class S1uimDecode extends CommonDecode {
         this.totalTRAFF=SimpleDateDeal.sum(this.ulTRAFF,this.dlTRAFF);
     }
 
-    public void httpDecode(String[] str) 	{
-		this.l7TRANSTIME=SimpleDateDeal.sum(this.l7TRANSTIME,str[56]);
+    public void httpDecode(String[] str) {
 		if(this.feature.equals("")) {
 			this.feature = str[S1uimIndex.feature_Index];
 		}
@@ -301,8 +299,6 @@ public class S1uimDecode extends CommonDecode {
 		getL7TRANSTIME(str,S1uimIndex.l7TRANSTIME_Index);
 		getTCPULRESTTRAF(str,S1uimIndex.tcpULRESTTRAF_Index,S1uimIndex.mss);
 		getTCPDLRESTTRAF(str,S1uimIndex.tcpDLRESTTRAF_Index,S1uimIndex.mss);
-		getL7UPTRANSTIME(str,95);
-		getL7DOWNTRANSTIME(str,96);
     }
 
     @Override

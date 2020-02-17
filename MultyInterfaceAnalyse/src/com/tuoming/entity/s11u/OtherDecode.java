@@ -68,7 +68,7 @@ public class OtherDecode extends CommonDecode {
 		this.cgiECI=str[cgiECI_Index];
 	}
 	public void getSERVNAME(String[] str,int servname_Index) {
-		this.servname= typeDecode.SERVNAME(str[32] +"_" +str[servname_Index]) ;
+		this.servname= typeDecode.SERVNAME(str[servname_Index]) ;
 	}
 	public void getDURITION(String[] str,int durition_Index) {
 		this.durition=SimpleDateDeal.diff(str[26],str[25]);
@@ -86,12 +86,12 @@ public class OtherDecode extends CommonDecode {
 		this.rat="7";
 	}
 	public void getCDRSTAT(String[] str,int cdrstat_Index) {
-		switch (str[cdrstat_Index])
+		switch (cdrstat_Index)
 		{
-			case "0": this.cdrstat = "0"; break;
-			case "1" : case "2": case "3": this.cdrstat = "3"; break;
-			case "6": case "7": this.cdrstat = "2"; break;
-			case "4": case "5": this.cdrstat = ""; break;
+			case 0: this.cdrstat = "0"; break;
+			case 1 : case 2: case 3: this.cdrstat = "3"; break;
+			case 6: case 7: this.cdrstat = "2"; break;
+			case 4: case 5: this.cdrstat = ""; break;
 			default:cdrstat = ""; break;
 		}
 	}
@@ -114,12 +114,12 @@ public class OtherDecode extends CommonDecode {
 		this.downTCPRETRANSNUM=str[downTCPRETRANSNUM_Index];
 	}
 	public void getIPUSER(String[] str,int ipUSER_Index,int ipUSER_Index2,int sgwIP_Index) {
-		if(str[ipUSER_Index].equals(""))this.ipUSER=str[ipUSER_Index2];
-		else this.ipUSER=str[ipUSER_Index];
+		if(str[ipUSER_Index2].equals(""))this.ipUSER=str[ipUSER_Index];
+		else this.ipUSER=str[ipUSER_Index2];
 	}
 	public void getIPSERV(String[] str,int ipSERV_Index,int ipSERV_Index2,int sgwIP_Index) {
-		if(str[ipSERV_Index].equals(""))this.ipSERV=str[ipSERV_Index2];
-		else this.ipSERV=str[ipSERV_Index];
+		if(str[ipSERV_Index2].equals(""))this.ipSERV=str[ipSERV_Index];
+		else this.ipSERV=str[ipSERV_Index2];
 	}
 	public void getL4TYPE(String[] str,int l4TYPE_Index) {
 		this.l4TYPE=str[l4TYPE_Index];
@@ -137,7 +137,7 @@ public class OtherDecode extends CommonDecode {
 		this.tcpDLRETRNUM=str[tcpDLRETRNUM_Index];
 	}
 	public void getL7TYPE(String[] str,int l7TYPE_Index) {
-		this.l7TYPE="999";
+		this.l7TYPE=typeDecode.L7_TYPE(str[l7TYPE_Index]);
 	}
 	public void getL7Delay(String[] str,int l7Delay_Index) {
 		this.l7Delay=str[l7Delay_Index];

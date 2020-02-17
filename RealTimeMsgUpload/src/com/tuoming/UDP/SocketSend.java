@@ -1,6 +1,7 @@
 package com.tuoming.UDP;
 
 import com.tuoming.common.CdrKind;
+import com.tuoming.utils.CommonUtils;
 import com.tuoming.utils.UDMsgSendCount;
 import org.apache.log4j.Logger;
 
@@ -47,6 +48,7 @@ public class SocketSend implements Runnable {
         while (true){
             while(realMsgList.size() > 0){
                 byte[] realMsg = realMsgList.poll();
+//                logger.info("数据长度："+realMsg.length+",实时消息内容："+ CommonUtils.bytesToHexString(realMsg));
                 if(sendPscket == null){
                     sendPscket = new DatagramPacket(realMsg,realMsg.length,address,port);
                 }else {

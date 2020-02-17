@@ -4,6 +4,8 @@ import com.tuoming.common.RealTimeMsgAlg;
 import com.tuoming.utils.CommonUtils;
 import com.tuoming.utils.MD5Util;
 import com.tuoming.utils.ParseEvery;
+import com.tuoming.utils.RealTimeMsgCountUtil;
+import com.tuoming.writeFile.WriteCountResult;
 
 import java.io.File;
 import java.text.ParseException;
@@ -12,11 +14,6 @@ import java.util.Date;
 
 public class Demo {
     public static void main(String[] args) throws ParseException {
-        SimpleDateFormat sdf2 = new SimpleDateFormat("mm");
-        long l = System.currentTimeMillis();
-        System.out.println(l);
-        String format = sdf2.format(new Date(l));
-        System.out.println(CommonUtils.strToInteger(format));
-
+        System.out.println("22.2".contains("."));
     }
 }

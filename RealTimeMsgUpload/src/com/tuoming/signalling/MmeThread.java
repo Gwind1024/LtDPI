@@ -4,13 +4,14 @@ import com.tuoming.common.FileDealUntil;
 import com.tuoming.readfile.SigReadFile;
 import com.tuoming.signalling.mme.MMeInfo;
 import com.tuoming.utils.UDMsgSendCount;
+import org.apache.log4j.Logger;
 import redis.clients.jedis.Jedis;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
 
 public class MmeThread implements Runnable {
+    private Logger logger = Logger.getLogger(MmeThread.class);
     private String path;
     private Queue<byte[]> realMsgList;
     private Jedis jedis;
@@ -24,23 +25,10 @@ public class MmeThread implements Runnable {
         this.count=count;
     }
 
-    public static void main(String[] args) {
-        List<byte[]> result = new ArrayList<>();
-        SigReadFile sigReadFile = new SigReadFile();
-        sigReadFile.read("F:\\a.csv");
-        List<String> list = sigReadFile.getFileBuffer();
-        for (String str : list) {
-            byte[] bytes = MMeInfo.mmeTobytes(str, null);
-            if (bytes != null) {
-               result.add(bytes);
-            }
-        }
-        System.out.println(result.size());
-    }
-
     @Override
     public void run() {
-        Thread.currentThread().setName("Mme线程");
+        Thread.currentThread().setName("Mme文件处理线程");
+        logger.info(Thread.currentThread().getName()+"启动!");
         String[] split = path.split("\\|");
         String inPath = split[0];
         String outPath = split[1];
@@ -48,6 +36,7 @@ public class MmeThread implements Runnable {
             //F:\dpi\mme|F:\dpi\mme
             String[] pathArr = FileDealUntil.scanFile(inPath);
             for (String path : pathArr) {
+                logger.info("["+path+"]文件开始处理!");
                 SigReadFile sigReadFile = new SigReadFile();
                 sigReadFile.read(inPath + "/" + path);
                 List<String> list = sigReadFile.getFileBuffer();
@@ -58,7 +47,9 @@ public class MmeThread implements Runnable {
                         count.mmeSum.getAndIncrement();
                     }
                 }
+                logger.info("["+path+"]文件处理完成!准备转移目录……");
                 FileDealUntil.moveFile(inPath + "/" + path, outPath + "/" + path);
+                logger.info("["+path+"]文件转移完成!");
             }
 
             try {

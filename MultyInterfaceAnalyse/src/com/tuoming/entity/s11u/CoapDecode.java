@@ -170,7 +170,7 @@ public class CoapDecode extends CommonDecode implements Serializable {
             durTcp2nd = arr[CoapIndex.durTcp2nd];
             tcpUlretrNum = arr[CoapIndex.tcpUlretrNum];
             tcpDlretrNum = arr[CoapIndex.tcpDlretrNum];
-            l7Type = "1000";
+            l7Type = commonDecode.L7_TYPE(arr[31]);
             l7Delay = arr[CoapIndex.l7Delay];
 
 
@@ -195,6 +195,7 @@ public class CoapDecode extends CommonDecode implements Serializable {
             if(transReplycode != null || !"65535".equals(transReplycode)){
                 status = String.valueOf(Integer.parseInt(transReplycode)>>5);
             }
+
             requestTime = arr[CoapIndex.requestTime];
             ackTime = arr[CoapIndex.ackTime];
             lastTime = SimpleDateDeal.getFormatDate(arr[CoapIndex.lastTime]);
@@ -230,6 +231,16 @@ public class CoapDecode extends CommonDecode implements Serializable {
                     serverFailureCount = "1";
                 }
             }
+//            if(transReplycode == null){
+//            }else if(!"255".equals(transReplycode) && transReplycode.startsWith("2")){
+//                responseSuccessCount = "1";
+//            }else if(transReplycode.startsWith("4")){
+//                clientFailureCount = "1";
+//            }else if(transReplycode.startsWith("5")){
+//                serverFailureCount = "1";
+//            }
+
+            //ip
             sgwGgsnIpAdd = arr[CoapIndex.sgwGgsnIpAdd];
             procedureEndtime = arr[CoapIndex.endT];
         }

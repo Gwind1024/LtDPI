@@ -1,6 +1,7 @@
 package com.tuoming.entity.s1udns;
 
 import com.tuoming.common.CommonDecode;
+import com.tuoming.common.RedisUntil;
 import com.tuoming.entity.common.typeDecode;
 import com.tuoming.tools.SimpleDateDeal;
 
@@ -11,9 +12,9 @@ public class S1udnsDecode extends CommonDecode {
     public String starttime = "";//开始时间
     public String endtime = "";//结束时间
     public String cdrstat = "";//单据状态
-//    public String imsi = "";//IMSI
-//    public String imei = "";//终端类型
-//    public String msisdn = "";//手机号码
+    public String imsi = "";//IMSI
+    public String imei = "";//终端类型
+    public String msisdn = "";//手机号码
     public String enbSGSNIP = "";//SGSN或enodeB用户面IP
     public String enbSGSNGTPTEID = "";//SGSN或enodeB用户面TEID
     public String sgwGGSNIP = "";//GGSN或SGW用户面IP
@@ -76,8 +77,8 @@ public class S1udnsDecode extends CommonDecode {
     }
 
     public void getCDRSTAT(String[] str, int cdrstat_Index, int appSTATUS_Index) {
-        this.cdrstat = str[appSTATUS_Index];
-        if (str[cdrstat_Index] == "2") {
+        this.cdrstat = str[cdrstat_Index];
+        if (str[appSTATUS_Index] == "2") {
             this.cdrstat = "3";
         }
     }
@@ -91,7 +92,7 @@ public class S1udnsDecode extends CommonDecode {
     }
 
     public void getMSISDN(String[] str, int msisdn_Index) {
-        this.msisdn=SimpleDateDeal.Except86(str[msisdn_Index]);
+        this.msisdn = str[msisdn_Index];
     }
 
     public void getENBSGSNIP(String[] str, int enbSGSNIP_Index) {
@@ -138,7 +139,7 @@ public class S1udnsDecode extends CommonDecode {
     }
 
     public void getDLDURARION(String[] str, int dlDURARION_Index) {
-        this.dlDURARION = SimpleDateDeal.divide(str[dlDURARION_Index], "1000");
+        this.ulDURARION = SimpleDateDeal.divide(str[dlDURARION_Index], "1000");
     }
 
     public void getULIPPACKET(String[] str, int ulIPPACKET_Index) {
@@ -176,8 +177,8 @@ public class S1udnsDecode extends CommonDecode {
         this.destPORT = str[destPORT_Index];
     }
 
-    public void getSERVNAME(String[] str,int servname_type_Index, int servname_Index) {
-        this.servname = typeDecode.SERVNAME(str[servname_type_Index]+"_"+str[servname_Index]);
+    public void getSERVNAME(String[] str, int servname_Index) {
+        this.servname = typeDecode.SERVNAME(str[servname_Index]);
     }
 
     public void getAPPSTATUS(String[] str, int appSTATUS_Index) {
@@ -258,7 +259,7 @@ public class S1udnsDecode extends CommonDecode {
         getSRCPORT(str, S1udnsIndex.srcPORT_Index);
         getDESTIP(str, S1udnsIndex.destIP_Index, S1udnsIndex.destIP_Index2, S1udnsIndex.machineIPAddtype_Index);
         getDESTPORT(str, S1udnsIndex.destPORT_Index);
-        getSERVNAME(str,S1udnsIndex.servname_type_Index, S1udnsIndex.servname_Index);
+        getSERVNAME(str, S1udnsIndex.servname_Index);
         getAPPSTATUS(str, S1udnsIndex.appSTATUS_Index);
         getAPPTYPEEXT1(str, S1udnsIndex.appTYPEEXT1_Index);
         getAPPTYPEEXT2(str, S1udnsIndex.appTYPEEXT2_Index);

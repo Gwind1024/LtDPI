@@ -4,12 +4,14 @@ import com.tuoming.common.FileDealUntil;
 import com.tuoming.readfile.SigReadFile;
 import com.tuoming.signalling.iups.IupsInfo;
 import com.tuoming.utils.UDMsgSendCount;
+import org.apache.log4j.Logger;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Queue;
 
 public class IupsThread implements Runnable {
+    private Logger logger = Logger.getLogger(IupsThread.class);
     private String path;
     private Queue<byte[]> realMsgList;
     private UDMsgSendCount count;
@@ -23,7 +25,8 @@ public class IupsThread implements Runnable {
 
     @Override
     public void run() {
-        Thread.currentThread().setName("Iups线程");
+        Thread.currentThread().setName("IuPS文件处理线程");
+        logger.info(Thread.currentThread().getName()+"启动!");
         String[] split = path.split("\\|");
         String inPath = split[0];
         String outPath = split[1];
@@ -32,8 +35,9 @@ public class IupsThread implements Runnable {
         while (true) {
             //F:\iups\mme|F:\iups\mme|PSRAU|PSReloc
             String[] pathArr = FileDealUntil.scanFile(inPath);
-            System.out.println("文件列表扫描" + Arrays.toString(pathArr));
+//            System.out.println("文件列表扫描" + Arrays.toString(pathArr));
             for (String path : pathArr) {
+                logger.info("["+path+"]文件开始处理!");
                 if (path.startsWith(rau)) {
                     SigReadFile sigReadFile = new SigReadFile();
                     sigReadFile.read(inPath + "/" + path);
@@ -58,7 +62,9 @@ public class IupsThread implements Runnable {
                         }
                     }
                 }
+                logger.info("["+path+"]文件处理完成!准备转移目录……");
                 FileDealUntil.moveFile(inPath + "/" + path, outPath + "/" + path);
+                logger.info("["+path+"]文件转移完成!");
             }
 
             try {

@@ -33,6 +33,7 @@ public class McInfo {
             McSwitchInfo mcSwitchInfo = new McSwitchInfo();
             boolean flag = mcSwitchInfo.init(split, jedis);
             if (flag) {
+//                System.out.println(mcSwitchInfo.toString());
                 return mcSwitchInfo.toBytes();
             }
 

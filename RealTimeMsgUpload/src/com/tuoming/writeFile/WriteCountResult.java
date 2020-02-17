@@ -40,7 +40,7 @@ public class WriteCountResult {
         }
     }
     public String getFileName(String time){
-        String fileName = "ZJ_OTHER_MOBILE_CONS_Huawei_CXDR_OTHER_900_"+ time + "_REALTIMELOG-00000_0_0.csv.tmp";
+        String fileName = "ZJ_OTHER_MOBILE_CONS_Huawei_CXDR_OTHER_900_"+ time + "_REALTIMELOG-00000_0_0.txt.tmp";
         return fileName;
     }
     public void renameFile(File file){

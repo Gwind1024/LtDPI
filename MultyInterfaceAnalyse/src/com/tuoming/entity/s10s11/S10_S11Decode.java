@@ -95,9 +95,9 @@ public class S10_S11Decode extends CommonDecode {
 
     @Override
     public void getCdrStat(String[] str, int cdrStat_Index) {
-        if ("1".equals(str[cdrStat_Index])) {
+        if("1".equals(str[cdrStat_Index])){
             this.cdrStat = "0";
-        } else {
+        }else{
             this.cdrStat = "1";
         }
     }
@@ -264,7 +264,7 @@ public class S10_S11Decode extends CommonDecode {
         getStartTime(xdrSplit, S10_S11Index.StartTime);
         getEndTime(xdrSplit, S10_S11Index.EndTime);
         getSrvStat(xdrSplit, S10_S11Index.SrvStat);
-        getCdrStat(xdrSplit, S10_S11Index.SrvStat);
+        getCdrStat(xdrSplit,S10_S11Index.SrvStat);
         getXdrId(xdrSplit, S10_S11Index.XDR_ID);
         setMME_Address(xdrSplit, S10_S11Index.MME_Address);
         setMME_Port(xdrSplit, S10_S11Index.MME_Port);
@@ -297,7 +297,7 @@ public class S10_S11Decode extends CommonDecode {
 
     @Override
     public String toString() {
-        RedisUntil.setToMap(this);
+        RedisUntil.setRedis(this);
         StringBuffer sb = new StringBuffer();
         sb.append(accessType == null ? "" : accessType).append(OUT_SEPARATOR).
                 append(interface0).append(OUT_SEPARATOR).

@@ -1,8 +1,12 @@
 package com.tuoming.test;
 
+import com.tuoming.utils.CommonUtils;
+import com.tuoming.utils.ParseEvery;
+
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class receiveDemo {
@@ -54,5 +58,19 @@ public class receiveDemo {
         }finally {
             sendDatagramSocket.close();
         }
+    }
+
+    public static String parseByte(DatagramPacket receivePacket){
+        StringBuffer sb = new StringBuffer();
+        byte[] data = receivePacket.getData();
+        if(receivePacket.getLength() == 249){
+            sb.append(data[0]).append(data[1]).append(data[2]);
+            byte[] bytes1 = new byte[8];
+            System.arraycopy(data,3,bytes1,0,8);
+            long l = ParseEvery.bytesToLong2(bytes1);
+            sb.append(l);
+
+        }
+        return sb.toString();
     }
 }

@@ -6,7 +6,6 @@ import com.tuoming.entity.s6a.S6aDecode;
 import com.tuoming.entity.s6a.S6aIndex;
 import com.tuoming.readfile.ReadFile;
 import com.tuoming.readfile.S6aReadFile;
-import com.tuoming.redis.RedisThread;
 import com.tuoming.sort.SortEntity;
 import com.tuoming.writefile.Write;
 import com.tuoming.writefile.WriteIndex;
@@ -76,9 +75,6 @@ public class S6AAnalyse {
         HashMap<String, Write> writeMap = new HashMap<>();
 
         int sortOutTimeCount = 0;
-
-        new Thread(new RedisThread()).start();
-
         while (true) {
             //列出所有可用文件（.csv结尾）文件
             List<String> list = FileDealUntil.fileListAndSort(inputPath, fileNameTimeIndex);

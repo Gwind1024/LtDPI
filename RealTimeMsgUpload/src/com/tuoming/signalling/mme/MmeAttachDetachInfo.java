@@ -7,8 +7,6 @@ import com.tuoming.utils.MD5Util;
 import com.tuoming.utils.ParseEvery;
 import com.tuoming.utils.TBCDUtil;
 
-import java.util.Arrays;
-
 public class MmeAttachDetachInfo extends SignallingCommon {
 
     //3字节
@@ -36,9 +34,6 @@ public class MmeAttachDetachInfo extends SignallingCommon {
     //gNBIP 4字节,16进制IP地址
     protected String gnbIp;
 
-    static int aa=1;
-    static int bb=1;
-
     @Override
     public boolean init(String[] str) {
         return false;
@@ -54,7 +49,6 @@ public class MmeAttachDetachInfo extends SignallingCommon {
                 serviceType = 1;
             } else {
                 return false;
-
             }
             time = TypeChange.timeChange(split[MmeIndex.getMmeIndex(MmeAttachDetachIndex.time, n)]);
             msisdn = split[MmeIndex.getMmeIndex(MmeAttachDetachIndex.msisdn, n)];

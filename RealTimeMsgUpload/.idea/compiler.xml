@@ -9,8 +9,8 @@
         <module name="RealTimeMsgUpload" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="RealTimeMsgUpload" target="8" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="RealTimeMsgUpload" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,6 +1,5 @@
 package com.tuoming.common;
 
-import com.tuoming.count.CountNum;
 import com.tuoming.entity.a_iucs.IucsDecode;
 import com.tuoming.entity.a_iucs.IucsIndex;
 import com.tuoming.entity.http.HttpDecode;
@@ -9,7 +8,6 @@ import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 import redis.clients.jedis.Pipeline;
 
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -19,7 +17,6 @@ import java.util.Map;
  */
 public class RedisUntil {
     private static JedisPool jedisPool;
-    public static Map map = new HashMap<String, String>();
 
     public static Jedis getRedis(String ip, String pwd) {
         if (jedisPool == null) {
@@ -27,14 +24,6 @@ public class RedisUntil {
             jedisPool = new JedisPool(poolConfig, ip, 6379, 3000, pwd);
         }
         return jedisPool.getResource();
-    }
-
-    public static void setToMap(CommonDecode common) {
-        synchronized (RedisUntil.class) {
-            if (!"".equals(common.imsi) && !"".equals(common.imei) && !"".equals(common.msisdn)) {
-                map.put(common.imsi, common.imei + "|" + common.msisdn);
-            }
-        }
     }
 
     /**
@@ -71,12 +60,14 @@ public class RedisUntil {
      * @param map
      */
     public static void setBatch(Jedis jedis, Map<String, String> map) {
-        Pipeline pipelined = jedis.pipelined();
-        synchronized (RedisUntil.class) {
-            for (String key : map.keySet()) {
-                pipelined.set(key, map.get(key));
+        for (String key : map.keySet()) {
+            if (jedis.exists(key)) {
+                map.remove(key);
             }
-            map.clear();
+        }
+        Pipeline pipelined = jedis.pipelined();
+        for (String key : map.keySet()) {
+            pipelined.set(key, map.get(key));
         }
         pipelined.sync();
         pipelined.close();
@@ -89,7 +80,9 @@ public class RedisUntil {
      * @param value imei|msisdn
      */
     public static void set(Jedis jedis, String key, String value) {
-        jedis.set(key, value);
+        if (!jedis.exists(key)) {
+            jedis.set(key, value);
+        }
     }
 
     public static void close() {
@@ -100,7 +93,7 @@ public class RedisUntil {
 
 
     public static void setRedis(CommonDecode common) {
-        if (!"".equals(common.imsi) && !"".equals(common.imei) && !"".equals(common.msisdn)) {
+        if ("".equals(common.imsi) && "".equals(common.imei) && "".equals(common.msisdn)) {
             set(common.jedis, common.imsi, common.imei + "|" + common.msisdn);
         }
     }
@@ -108,34 +101,54 @@ public class RedisUntil {
 
     public static void backfill(CommonDecode common) {
         //三者都为空
-        if (!"".equals(common.imsi) && ("".equals(common.imei) || "".equals(common.msisdn))) {
-            String arr = RedisUntil.get(common.jedis, common.imsi);
-            if (arr != null) {
-                String[] split = arr.split("\\|");
-                if (split.length == 2) {
-                    CountNum.backFillNum+=1;
-                    common.imei = split[0];
-                    common.msisdn = split[1];
-                }else {
-                    CountNum.nobackFillNum+=1;
+        if ("".equals(common.imsi) && "".equals(common.imei) && "".equals(common.msisdn)) {
+//            String arr = RedisUntil.randomSet(common.jedis);
+//            String[] split = arr.split("\\|");
+//            if (split.length == 3) {
+//                common.imsi = split[0];
+//                common.imei = split[1];
+//                common.msisdn = split[2];
+//            }
+//            common.imsi = "imsi";
+//            common.imei = "imei";
+//            common.msisdn = "msisdn";
+
+        } else {
+            if (!"".equals(common.imsi)) {
+                String arr = RedisUntil.get(common.jedis, common.imsi);
+                if (arr != null) {
+                    String[] split = arr.split("\\|");
+                    if (split.length == 2) {
+                        common.imei = split[0];
+                        common.msisdn = split[1];
+                    }
                 }
-            }else{
-                CountNum.nobackFillNum+=1;
             }
-        }else if("".equals(common.imsi)){
-            CountNum.nobackFillNum+=1;
         }
     }
 
     public static void backfill(String[] common) {
         //三者都为空
-        if (!"".equals(common[IucsIndex.imsi]) && ("".equals(common[IucsIndex.imei]) || "".equals(common[IucsIndex.msisdn]))) {
-            String arr = RedisUntil.get(IucsDecode.jedis, common[IucsIndex.imsi]);
-            if (arr != null) {
-                String[] split = arr.split("\\|");
-                if (split.length == 2) {
-                    common[IucsIndex.imei] = split[0];
-                    common[IucsIndex.msisdn] = split[1];
+        if ("".equals(common[IucsIndex.imsi]) && "".equals(common[IucsIndex.imei]) && "".equals(common[IucsIndex.msisdn])) {
+//            String arr = RedisUntil.randomSet(IucsDecode.jedis);
+//            String[] split = arr.split("\\|");
+//            if (split.length == 3) {
+//                common[IucsIndex.imsi] = split[0];
+//                common[IucsIndex.imei] = split[1];
+//                common[IucsIndex.msisdn] = split[2];
+//            }
+//            common[IucsIndex.imsi] = "imsi";
+//            common[IucsIndex.imei] = "imei";
+//            common[IucsIndex.msisdn] = "msisdn";
+        } else {
+            if (!"".equals(common[IucsIndex.imsi])) {
+                String arr = RedisUntil.get(IucsDecode.jedis, common[IucsIndex.imsi]);
+                if (arr != null) {
+                    String[] split = arr.split("\\|");
+                    if (split.length == 2) {
+                        common[IucsIndex.imei] = split[0];
+                        common[IucsIndex.msisdn] = split[1];
+                    }
                 }
             }
         }
@@ -159,8 +172,6 @@ public class RedisUntil {
 
     public static void main(String[] args) throws Exception {
         Jedis redis = RedisUntil.getRedis("192.168.2.142", "123456");
-        final String s = redis.get("460012873072156");
-        System.out.println(s.split("\\|").length);
         RedisUntil.close();
 
     }

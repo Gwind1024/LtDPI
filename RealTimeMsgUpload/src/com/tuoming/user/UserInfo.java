@@ -225,4 +225,27 @@ public abstract class UserInfo {
         ipByte[3] = ParseEvery.intToByte(integer3);
     }
 
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("UserInfo{");
+        sb.append("Version='").append(Version).append('\'');
+        sb.append(", Time=").append(Time);
+        sb.append(", MSISDN='").append(MSISDN).append('\'');
+        sb.append(", IMEI='").append(IMEI).append('\'');
+        sb.append(", IMSI='").append(IMSI).append('\'');
+        sb.append(", RAT=").append(RAT);
+        sb.append(", LACorTAC=").append(LACorTAC);
+        sb.append(", CIorECI=").append(CIorECI);
+        sb.append(", APN='").append(APN).append('\'');
+        sb.append(", URLorHOST='").append(URLorHOST).append('\'');
+        sb.append(", Longitude=").append(Longitude);
+        sb.append(", Latitude=").append(Latitude);
+        sb.append(", FlowType=").append(FlowType);
+        sb.append(", CoordinateSystem=").append(CoordinateSystem);
+        sb.append(", ProvinceID='").append(ProvinceID).append('\'');
+        sb.append(", gNBIP='").append(gNBIP).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
+
 }

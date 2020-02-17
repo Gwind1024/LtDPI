@@ -70,7 +70,7 @@ public class Mc2LocationInfo extends SignallingCommon {
             serviceType = 5;
             roamType = TypeChange.strToInteger(TypeChange.getAfter5(split[McSwitchIndex.roamType]));
             if (roamType == null) {
-                roamType = DealMethod.setRoamType(imsi);
+                roamType = DealMethod.setRoamType(msisdn);
             }
 
 //            uenc = TypeChange.strToInteger(split[Mc2LocationIndex.uenc]);

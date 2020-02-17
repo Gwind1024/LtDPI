@@ -4,12 +4,14 @@ import com.tuoming.common.FileDealUntil;
 import com.tuoming.readfile.SigReadFile;
 import com.tuoming.signalling.mc.McInfo;
 import com.tuoming.utils.UDMsgSendCount;
+import org.apache.log4j.Logger;
 import redis.clients.jedis.Jedis;
 
 import java.util.List;
 import java.util.Queue;
 
 public class McThread implements Runnable {
+    private Logger logger = Logger.getLogger(McThread.class);
     private String path;
     private Queue<byte[]> realMsgList;
     private Jedis jedis;
@@ -25,7 +27,8 @@ public class McThread implements Runnable {
 
     @Override
     public void run() {
-        Thread.currentThread().setName("Mc线程");
+        Thread.currentThread().setName("Mc文件处理线程");
+        logger.info(Thread.currentThread().getName()+"启动!");
         String[] split = path.split("\\|");
         String inPath = split[0];
         String outPath = split[1];
@@ -35,6 +38,7 @@ public class McThread implements Runnable {
             //F:\mc\mme|F:\mc\mme|MC_LOCATION|MC_SWITCH
             String[] pathArr = FileDealUntil.scanFile(inPath);
             for (String path : pathArr) {
+                logger.info("["+path+"]文件开始处理!");
                 if (path.startsWith(loca)) {
                     SigReadFile sigReadFile = new SigReadFile();
                     sigReadFile.read(inPath + "/" + path);
@@ -59,8 +63,9 @@ public class McThread implements Runnable {
                         }
                     }
                 }
+                logger.info("["+path+"]文件处理完成!准备转移目录……");
                 FileDealUntil.moveFile(inPath + "/" + path, outPath + "/" + path);
-
+                logger.info("["+path+"]文件转移完成!");
             }
 
             try {

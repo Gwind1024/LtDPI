@@ -43,24 +43,26 @@ public class AnalysisFileThread implements Runnable{
     }
     @Override
     public void run() {
-        String s1uPath = s1uFile.getName().toLowerCase();
-        Thread.currentThread().setName(s1uPath+"文件处理线程");
-        logger.info(Thread.currentThread().getName()+"启动!");
+//        String s1uPath = s1uFile.getName().toLowerCase();
         String parent = s1uFile.getParent();
         if(flag == CdrKind.HTTP){
             userInfo = new HttpInfo(flowMap);
             removePath = parent+File.separator+"http_bak";
+            Thread.currentThread().setName("HTTP文件处理线程");
         }else if(flag == CdrKind.GEN){
             userInfo = new GenInfo(flowMap);
             removePath = parent+File.separator+"gen_bak";
+            Thread.currentThread().setName("GENERAL文件处理线程");
         }else if(flag == CdrKind.STREAM){
             userInfo = new StreamInfo(flowMap);
             removePath = parent+File.separator+"stream_bak";
+            Thread.currentThread().setName("STREAM文件处理线程");
         }else{
-            System.err.println("ERROR FILE TYPE");
+            logger.error("ERROR FILE TYPE");
             return;
         }
-        logger.info("["+Thread.currentThread().getName()+"],转移目录:"+removePath);
+        logger.info(Thread.currentThread().getName()+"启动!");
+        logger.info("转移目录:"+removePath);
         String line;
         while(true){
 
@@ -78,6 +80,7 @@ public class AnalysisFileThread implements Runnable{
                 }
             });
             for(File file : fileList){
+                logger.info("["+file.getName()+"]文件开始处理!");
                 try(
                         BufferedReader br = new BufferedReader(new FileReader(file))
                 ) {
@@ -87,14 +90,14 @@ public class AnalysisFileThread implements Runnable{
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                logger.info("["+Thread.currentThread().getName()+"],"+file.getName()+"文件处理完成!准备转移目录……");
+                logger.info("["+file.getName()+"]文件处理完成!准备转移目录……");
                 File removeFile = new File(removePath + File.separator + file.getName());
                 if(removeFile.exists()){
                     file.delete();
                 }else{
                     file.renameTo(removeFile);
                 }
-                logger.info("["+Thread.currentThread().getName()+"],"+file.getName()+"文件转移成功!");
+                logger.info("["+file.getName()+"]文件转移成功!");
             }
             try {
                 Thread.sleep(100);

@@ -63,7 +63,7 @@ public class MmeTauInfo extends SignallingCommon {
             lacTac = TypeChange.strToInteger(split[MmeIndex.getMmeIndex(MmeTauIndex.lacTac, n)]);
             ciEci = TypeChange.strToLong(split[MmeIndex.getMmeIndex(MmeTauIndex.ciEci, n)]);
             serviceType = 5;
-            roamType = DealMethod.setRoamType(imsi);
+            roamType = DealMethod.setRoamType(msisdn);
             String uencStr = split[MmeIndex.getMmeIndex(MmeTauIndex.uenc, n)];
             if (uencStr.length() == 10) {
                 uenc = TypeChange.strToInteger(uencStr.substring(8, 9));

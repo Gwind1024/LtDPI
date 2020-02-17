@@ -13,7 +13,7 @@ public interface S1udnsIndex {
     int uTYPE_Index = 0000;//DNS直接赋值3
     int starttime_Index = 19;//开始时间
     int endtime_Index = 20;//结束时间
-    int cdrstat_Index = 51;//单据状态??????
+    int cdrstat_Index = 0000;//单据状态??????
     int imsi_Index = 5;//IMSI
     int imei_Index = 6;//终端类型
     int msisdn_Index = 7;//手机号码
@@ -38,7 +38,6 @@ public interface S1udnsIndex {
     int destIP_Index = 30;//访问IP 31 32
     int destIP_Index2 = 31;//访问IP 31 32
     int destPORT_Index = 32;//服务器端口
-    int servname_type_Index = 22;//流量类型大类
     int servname_Index = 23;//流量类型
     int appSTATUS_Index = 25;//App Status
     int appTYPEEXT1_Index = 0000;//应用类别扩展字段

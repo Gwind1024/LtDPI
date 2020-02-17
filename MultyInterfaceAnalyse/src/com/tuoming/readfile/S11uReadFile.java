@@ -17,7 +17,7 @@ public class S11uReadFile extends ReadFile {
             br = new BufferedReader(fis);
             while ((line = br.readLine()) != null) {
                 SortEntity sortEntity = new SortEntity();
-                boolean flag = sortEntity.createNumEntity(line, MqttIndex.startT_Index,MqttIndex.size);
+                boolean flag = sortEntity.createNumEntity(line, MqttIndex.endT_Index,MqttIndex.size);
                 if (flag) {
                     insertSort(sortEntity);
                 }

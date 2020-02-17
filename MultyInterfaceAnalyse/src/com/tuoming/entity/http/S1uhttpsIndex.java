@@ -20,7 +20,6 @@ public interface S1uhttpsIndex {
 	int rac_Index=0000;//路由区编码
 	int lacTAC_Index=15;//位置区或跟踪区编码
 	int cgiECI_Index=16;//小区号码
-	int servname_type_Index=22;//流量类型大类
 	int servname_Index=23;//流量类型
 	int durition_Index=0000;//时长 21-20
 	int ulTRAFF_Index=33;//上行流量（bytes）
@@ -49,7 +48,7 @@ public interface S1uhttpsIndex {
 	int apn_Index=17;//APN
 	int ipSGSNENB_Index=10;//SGSN IP/eNB IP
 	int ipSGW_Index=9;//GGSN IP/S-GW IP
-	int mcc_Index=5;//MCC 460
+	int mcc_Index=0000;//MCC 460
 	int mnc_Index=0000;//MNC  01
 	int contentTYPE_Index=0000;//Content-Type
 	int portUSER_Index=28;//源端口

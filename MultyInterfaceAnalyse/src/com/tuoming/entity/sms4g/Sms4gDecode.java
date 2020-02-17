@@ -2,18 +2,17 @@ package com.tuoming.entity.sms4g;
 
 import com.tuoming.common.CommonDecode;
 import com.tuoming.common.RedisUntil;
-import com.tuoming.count.CountNum;
 
 import java.io.Serializable;
 
 public class Sms4gDecode extends CommonDecode implements Serializable {
     private String starttime;
     private String endtime;
-    //    private String msisdn;
-//    private String imsi;
+    private String msisdn;
+    private String imsi;
     private String rmsisdn;
     private String rimsi;
-    //    private String imei;
+    private String imei;
     private String result;
     private String duration;
     private String smcAddr;
@@ -52,7 +51,6 @@ public class Sms4gDecode extends CommonDecode implements Serializable {
 
     public void decode(String[] arr) {
         if (arr.length >= Sms4gIndex.size) {
-            initialize();
             starttime = arr[Sms4gIndex.starttime];
             endtime = arr[Sms4gIndex.endtime];
             msisdn = arr[Sms4gIndex.msisdn].startsWith("86") ? arr[Sms4gIndex.msisdn].substring(2) : arr[Sms4gIndex.msisdn];
@@ -88,44 +86,8 @@ public class Sms4gDecode extends CommonDecode implements Serializable {
         }
     }
 
-    public void initialize() {
-        starttime = null;
-        endtime = null;
-        msisdn = null;
-        imsi = null;
-        rmsisdn = null;
-        rimsi = null;
-        imei = null;
-        result = null;
-        duration = null;
-        smcAddr = null;
-        procedureType = null;
-        mmeIp = null;
-        tai = null;
-        ecgi = null;
-        failuremsg = null;
-        errorcode = null;
-        releasercode = null;
-        cpCause = null;
-        rpCause = null;
-        mscip = null;
-        lai = null;
-        delayCmreq = null;
-        delayPagingreq1st = null;
-        delayPagingreq2st = null;
-        delayPagingreq3st = null;
-        delayPagingreqMore = null;
-        delayDownlink1st = null;
-        delayUplink1st = null;
-        delayDownlink2st = null;
-        delayUplink2st = null;
-        delayRelreq = null;
-        callId = null;
-    }
-
     @Override
     public String toString() {
-        CountNum.outputNum+=1;
         RedisUntil.backfill(this);
         StringBuilder sb = new StringBuilder();
         sb.append(starttime).append("|")

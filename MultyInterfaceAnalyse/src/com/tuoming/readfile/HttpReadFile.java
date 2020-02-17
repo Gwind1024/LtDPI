@@ -17,7 +17,7 @@ public class HttpReadFile extends ReadFile {
             br = new BufferedReader(fis);
             while ((line = br.readLine()) != null) {
                 SortEntity sortEntity = new SortEntity();
-                boolean flag = sortEntity.createNumEntity(line, S1uhttpsIndex.startT_Index,S1uhttpsIndex.size);
+                boolean flag = sortEntity.createNumEntity(line, S1uhttpsIndex.endT_Index,S1uhttpsIndex.size);
                 if (flag) {
                     insertSort(sortEntity);
                 }

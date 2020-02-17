@@ -3,7 +3,6 @@ package com.tuoming.entity.csfb;
 
 import com.tuoming.common.CommonDecode;
 import com.tuoming.common.RedisUntil;
-import com.tuoming.count.CountNum;
 
 import java.io.Serializable;
 
@@ -14,9 +13,9 @@ public class CsfbDecode extends CommonDecode implements Serializable {
     private String rMsisdn;
     private String rImsi;
     private String rImei;
-    //    private String msisdn;
-//    private String imsi;
-//    private String imei;
+    private String msisdn;
+    private String imsi;
+    private String imei;
     private String mTmsi;
     private String tmsi;
     private String mmeIpAdd;
@@ -112,7 +111,6 @@ public class CsfbDecode extends CommonDecode implements Serializable {
 
     public void decode(String[] arr) {
         if (arr.length >= CsfbIndex.size) {
-            initialize();
             procedureStarttime = arr[CsfbIndex.procedureStarttime];
             procedureEndtime = arr[CsfbIndex.procedureEndtime];
             procedureType = arr[CsfbIndex.procedureType];
@@ -207,103 +205,8 @@ public class CsfbDecode extends CommonDecode implements Serializable {
         }
     }
 
-    public void initialize() {
-        procedureStarttime = null;
-        procedureEndtime = null;
-        procedureType = null;
-        rMsisdn = null;
-        rImsi = null;
-        rImei = null;
-        msisdn = null;
-        imsi = null;
-        imei = null;
-        mTmsi = null;
-        tmsi = null;
-        mmeIpAdd = null;
-        mmeUeS1apId = null;
-        mmeGroupId = null;
-        mmeCode = null;
-        mmePort = null;
-        enbIpAdd = null;
-        enbPort = null;
-        tac = null;
-        eci = null;
-        sourLai = null;
-        lai = null;
-        sai = null;
-        endlai = null;
-        endsai = null;
-        endtac = null;
-        endeci = null;
-        ednmsc = null;
-        endrnc = null;
-        msc = null;
-        rnc = null;
-        csfbResult = null;
-        failuremsg = null;
-        failureCause = null;
-        firstCsfailuremsg = null;
-        firstCserrorcode = null;
-        csmaincause = null;
-        csreleasermsg = null;
-        csreleasercode = null;
-        callId = null;
-        csrantype = null;
-        endenbIpAdd = null;
-        endenbPort = null;
-        endmmeUeS1apId = null;
-        endmmePort = null;
-        endmmeGroupId = null;
-        endmmeCode = null;
-        oldmsc = null;
-        oldlai = null;
-        s1Delay = null;
-        csfbDelay = null;
-        delaySgspagreq = null;
-        delaySgspagres = null;
-        delayPagingreq = null;
-        delayServreq = null;
-        delayServres = null;
-        delayInitreq = null;
-        delayInitres = null;
-        delayCsfbrel = null;
-        delayCsfirstmsg = null;
-        delayCslureq = null;
-        delayCslures = null;
-        delayCsservreq = null;
-        delayCsservres = null;
-        delayTime = null;
-        delayCallproc = null;
-        delayCsassireq = null;
-        delayCsassires = null;
-        delayCssri = null;
-        delayCssrires = null;
-        delayCsprn = null;
-        delayCsprnres = null;
-        delayCsiam = null;
-        delayCsacm = null;
-        delayCsanm = null;
-        delayCsauthreq1st = null;
-        delayCsauthreq2nd = null;
-        delayCsauthres = null;
-        delayCscipcmd = null;
-        delayCscipcmp = null;
-        delayCstmsicmd = null;
-        delayCstmsicmp = null;
-        delayCsidreq = null;
-        delayCsidres = null;
-        delayCsalerting = null;
-        delayCsconnect = null;
-        talkduration = null;
-        delayCsrel = null;
-        delayIteretreq = null;
-        delayIteretres = null;
-        delayReleasecmp = null;
-    }
-
     @Override
     public String toString() {
-        CountNum.outputNum+=1;
         RedisUntil.backfill(this);
         StringBuilder sb = new StringBuilder();
         sb.append(procedureStarttime).append("|")

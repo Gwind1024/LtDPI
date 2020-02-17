@@ -1,8 +1,6 @@
 package com.tuoming;
 
 import com.tuoming.common.*;
-import com.tuoming.count.CountNum;
-import com.tuoming.count.MysqlUntil;
 import com.tuoming.entity.sgs.SgsDecode;
 import com.tuoming.entity.sgs.SgsIndex;
 import com.tuoming.readfile.ReadFile;
@@ -11,9 +9,10 @@ import com.tuoming.sort.SortEntity;
 import com.tuoming.writefile.Write;
 import com.tuoming.writefile.WriteIndex;
 
-import java.sql.Connection;
-import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class SGSAnalyse {
     public static void main(String[] args) {
@@ -63,40 +62,22 @@ public class SGSAnalyse {
         //每个网元对应一个写通道
         HashMap<String, Write> writeMap = new HashMap<>();
 
-        MysqlUntil mysqlUntil = new MysqlUntil();
-        Connection connect = mysqlUntil.connect(redisIP, redisPwd);
-        mysqlUntil.createTable("sgscount", connect);
-
-        CommonDecode line = new SgsDecode();
-
-        double sortOutTimeCount = 0;
-
-
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        Date date = new Date();
-
+        int sortOutTimeCount = 0;
         while (true) {
-            CountNum count = null;
             //列出所有可用文件（.csv结尾）文件
             List<String> list = FileDealUntil.fileListAndSort(inputPath, fileNameTimeIndex);
             System.out.println("扫描文件列表" + list);
-            long rT1 = System.currentTimeMillis();
+            long l1 = System.currentTimeMillis();
             for (String file : list) {
                 //读取一个文件
                 readFile.read(inputPath + "/" + file);
+                System.out.println("读入文件" + inputPath + "/" + file);
+                System.out.println("文件总条数" + readFile.size());
                 FileDealUntil.moveFile(inputPath + "/" + file, backupPath + "/" + file);
+                System.out.println(inputPath + "/" + file + "处理完毕，移动到" + backupPath + "/" + file);
             }
-            long rT2 = System.currentTimeMillis();
-            if (list.size() > 0 && readFile.size() > sortMaxBuffer) {
-                count = new CountNum();
-                count.init();
-                date.setTime(rT1);
-                String time = sdf.format(date);
-                count.time = time;
-                count.timeStamp = date.getTime();
-                count.fileCount = list.size();
-                count.intputNum = readFile.size() - sortMaxBuffer;
-            }
+            long l2 = System.currentTimeMillis();
+            System.out.println("处理文件总时间总时间：" + (l2 - l1) + "ms");
             list.clear();
 
             SortEntity sort = null;
@@ -105,44 +86,24 @@ public class SGSAnalyse {
                 ReadFile.MaxCount = 0;
             }
 
-            long dT1 = System.currentTimeMillis();
-            boolean flag = true;
             while ((sort = readFile.list.getFirst()) != null) {
-                flag = false;
+                sortOutTimeCount = 0;
                 String[] split = sort.str.split(SgsIndex.splite, -1);
+                CommonDecode line = new SgsDecode();
                 line.decode(split);
                 WriteUntil.dealData(line, publicTableMap, cycleTime, writeMap, outputPath, fileSize, WriteIndex.sgsWrite);
             }
-            if (!flag) {
-                sortOutTimeCount = 0;
-            }
-            long dT2 = System.currentTimeMillis();
 
-            if (count != null) {
-                count.dealTime = (rT2 - rT1) + (dT2 - dT1);
-                count.dealSpeed = Integer.parseInt(String.format("%.0f", (count.intputNum * 1.0 / count.dealTime) * 1000));
-                count.backFillRatio = Double.parseDouble(String.format("%.5f", (CountNum.outputNum - CountNum.nobackFillNum) * 1.0 / CountNum.outputNum));
-                mysqlUntil.insert(count, connect, "sgscount");
-//                System.out.println("输出结果打印"+count.toString());
+            //排序缓冲区重置
+            ReadFile.MaxCount = sortMaxBuffer;
+            try {
+                //5秒扫描一次文件
+                Thread.sleep(5000L);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
-
-            if (ReadFile.MaxCount == 0) {
-                WriteUntil.dealFinal(writeMap, outputPath);
-                //排序缓冲区重置
-                ReadFile.MaxCount = sortMaxBuffer;
-                sortOutTimeCount = 0;
-            }
-
-            if (flag) {
-                try {
-                    //5秒扫描一次文件
-                    Thread.sleep(500L);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                //排序超时时间累加
-                sortOutTimeCount += 0.5;
-            }
+            //排序超时时间累加
+            sortOutTimeCount += 5;
         }
     }
 }

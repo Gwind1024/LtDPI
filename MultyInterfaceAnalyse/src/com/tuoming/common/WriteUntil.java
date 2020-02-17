@@ -9,17 +9,6 @@ import java.util.Map;
 
 public class WriteUntil {
 
-    public static void dealFinal(HashMap<String, Write> writeMap,String outputPath) {
-        for (String key : writeMap.keySet()) {
-            Write write = writeMap.get(key);
-            if (write.getWf() != null) {
-                write.getWf().close();
-                write.setWf(null);
-                FileDealUntil.renameFile(outputPath + "/" + write.getTmpName(), outputPath + "/" + write.getFinlName());
-            }
-        }
-    }
-
     public static void dealData(CommonDecode line, Map<String, String> publicTableMap, Integer cycleTime, HashMap<String, Write> writeMap, String outputPath, Integer fileSize, Integer writeSign) {
         if (line.getMmeIp() == null || line.getEndTime() == null) {
             return;
@@ -36,7 +25,7 @@ public class WriteUntil {
         //判断是否达到文件生成时间，达到关闭通道，生成文件
         for (String ne : writeMap.keySet()) {
             Write write = writeMap.get(ne);
-            if (write.getWf() != null && FileDealUntil.longTimeToMin(time) - FileDealUntil.longTimeToMin(write.getTime()) >= cycleTime) {
+            if (FileDealUntil.longTimeToMin(time) - FileDealUntil.longTimeToMin(write.getTime()) >= cycleTime) {
                 write.getWf().close();
                 write.setWf(null);
                 FileDealUntil.renameFile(outputPath + "/" + write.getTmpName(), outputPath + "/" + write.getFinlName());

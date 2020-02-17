@@ -1,8 +1,10 @@
 package com.tuoming.common;
 
 import com.tuoming.user.UserInfo;
+import com.tuoming.utils.CommonUtils;
 import com.tuoming.utils.RedisUntil;
 import com.tuoming.utils.UDMsgSendCount;
+import org.apache.log4j.Logger;
 import redis.clients.jedis.Jedis;
 
 import java.util.Arrays;
@@ -10,6 +12,7 @@ import java.util.Map;
 import java.util.Queue;
 
 public class RealTimeMsgAlg {
+    private static Logger logger = Logger.getLogger(RealTimeMsgAlg.class);
     //182种重点业务
     private final int[] flowtype = new int[]{304,300,330,308,2000001,412,416,2000002,407,404,631,2000003,2000004,2000005,2000006,2000007
             ,2000008,2000009,2000010,2000011,450,452,464,451,462,2000012,2000013,2000014,2000015,2000016,219,2000017,225,212
@@ -35,32 +38,39 @@ public class RealTimeMsgAlg {
     public void analysisMsg(String xdrInfo,UserInfo userInfo,int cdrType,Queue<byte[]> realMsgList){
         switch (cdrType){
             case CdrKind.HTTP :
-                //todo http话单出实时情形判断,构建话单,并放入发送队列
                 userInfo.Init(xdrInfo);
                 if(jugdeImportType(userInfo.FlowType) && (judgeRequest(userInfo.transactionID)
                         || (userInfo.Longitude != -1 && userInfo.Latitude != -1) || "8".equals(userInfo.appType))){
-                    realMsgList.add(userInfo.CreateSend());
+                    byte[] bytes = userInfo.CreateSend();
+                    realMsgList.add(bytes);
+                    logger.info("HTTP实时消息字段："+userInfo.toString());
+                    logger.info("字节数据长度："+bytes.length+",实时消息字节流："+ CommonUtils.bytesToHexString(bytes));
 //                    userSendCount.
                 }
                 break;
             case CdrKind.GEN :
-                //todo Gen话单出实时情形判断,构建话单,并放入发送队列
                 userInfo.Init(xdrInfo);
                 if(jugdeImportType(userInfo.FlowType) && userInfo.protocolType == 7){
                     String key = "".equals(userInfo.ipServer1)?userInfo.ipServer2:userInfo.ipServer1;
                     String host = RedisUntil.get(redis, key);
+//                    String host = "";
                     if(host != null &&  !"".equals(host)){
                         host = "https://"+host;
                         userInfo.URLorHOST = host.length()>128?host.substring(0,128):host;
                     }
-                    realMsgList.add(userInfo.CreateSend());
+                    byte[] bytes = userInfo.CreateSend();
+                    realMsgList.add(bytes);
+                    logger.info("GEN实时消息字段："+userInfo.toString());
+                    logger.info("字节数据长度："+bytes.length+",实时消息字节流："+ CommonUtils.bytesToHexString(bytes));
                 }
                 break;
             case CdrKind.STREAM :
-                //todo Streaming话单出实时情形判断,构建话单,并放入发送队列
                 userInfo.Init(xdrInfo);
                 if(jugdeImportType(userInfo.FlowType)){
-                    realMsgList.add(userInfo.CreateSend());
+                    byte[] bytes = userInfo.CreateSend();
+                    realMsgList.add(bytes);
+                    logger.info("STREAM实时消息字段："+userInfo.toString());
+                    logger.info("字节数据长度："+bytes.length+",实时消息字节流："+ CommonUtils.bytesToHexString(bytes));
                 }
                 break;
         }

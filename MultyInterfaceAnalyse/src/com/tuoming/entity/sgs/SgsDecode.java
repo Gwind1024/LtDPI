@@ -3,7 +3,6 @@ package com.tuoming.entity.sgs;
 
 import com.tuoming.common.CommonDecode;
 import com.tuoming.common.RedisUntil;
-import com.tuoming.count.CountNum;
 
 import java.io.Serializable;
 
@@ -11,6 +10,9 @@ public class SgsDecode extends CommonDecode implements Serializable {
     private String accessType;
     private String interface0;
     private String sdrType;
+    private String imsi;
+    private String imei;
+    private String msisdn;
     private String mcc;
     private String mnc;
     private String startTime;
@@ -38,8 +40,8 @@ public class SgsDecode extends CommonDecode implements Serializable {
     private String sgsCause;
     private String cpCause;
     private String rpCause;
-//    private String vlrName;
-//    private String mmeName;
+    private String vlrName;
+    private String mmeName;
 
     public String getEndTime() {
         return endTime;
@@ -52,7 +54,6 @@ public class SgsDecode extends CommonDecode implements Serializable {
 
     public void decode(String[] arr) {
         if (arr.length >= SgsIndex.size) {
-            initialize();
             accessType = arr[SgsIndex.accessType];
             interface0 = arr[SgsIndex.interface0];
             sdrType = arr[SgsIndex.sdrType];
@@ -86,50 +87,13 @@ public class SgsDecode extends CommonDecode implements Serializable {
             sgsCause = arr[SgsIndex.sgsCause];
             cpCause = arr[SgsIndex.cpCause];
             rpCause = arr[SgsIndex.rpCause];
-//            vlrName = arr[SgsIndex.vlrName];
-//            mmeName = arr[SgsIndex.mmeName];
+            vlrName = arr[SgsIndex.vlrName];
+            mmeName = arr[SgsIndex.mmeName];
         }
-    }
-
-    public void initialize() {
-        accessType = null;
-        interface0 = null;
-        sdrType = null;
-        imsi = null;
-        imei = null;
-        msisdn = null;
-        mcc = null;
-        mnc = null;
-        startTime = null;
-        endTime = null;
-        srvstat = null;
-        cdrstat = null;
-        xdrId = null;
-        mscIp = null;
-        mscPort = null;
-        mmeIp = null;
-        mmePort = null;
-        servType = null;
-        locUpType = null;
-        callingImsi = null;
-        callingImei = null;
-        callingMsisdn = null;
-        calledImsi = null;
-        calledImei = null;
-        calledMsisdn = null;
-        tmsi = null;
-        tai = null;
-        cellId = null;
-        newLai = null;
-        oldLai = null;
-        sgsCause = null;
-        cpCause = null;
-        rpCause = null;
     }
 
 
     public String toString() {
-        CountNum.outputNum+=1;
         RedisUntil.backfill(this);
         StringBuilder sb = new StringBuilder();
         sb.append(accessType).append("|")
