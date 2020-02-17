@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+    <!--mme输入目录、转移目录-->
+    <mmeDir>F:\dpi\mme|F:\dpi\mme</mmeDir>
+    <!--iups输入目录、转移目录、rau文件名关键字、reloction文件名关键字-->
+    <iupsDir>E:\联通dpi\版本2\gf1\iups|E:\联通dpi\版本2\gf2\iups|PSRAU|PSReloc</iupsDir>
+    <!--mc输入目录、转移目录、location文件名关键字、switch文件名关键字-->
+    <mcDir>F:\mc\mme|F:\mc\mme|MC_LOCATION|MC_SWITCH</mcDir>
+
+    <!--江苏配置表目录-->
+    <jiangsuDir>F:\config\jiangsu.txt</jiangsuDir>
+    <!--南京配置表目录-->
+    <nanjingDir>F:\config\nanjing.txt</nanjingDir>
+
+    <!-- http文件存放目录 -->
+    <httpDir>F:\dpi\http</httpDir>
+    <!-- gen文件存放目录 -->
+    <genDir>F:\dpi\gen</genDir>
+    <!-- stream文件存放目录 -->
+    <streamDir>F:\dpi\stream</streamDir>
+
+    <!-- 实时消息统计结果文件存放目录 -->
+    <countResultDir>F:\dpi\count</countResultDir>
+
+    <!-- 网元信息表位置 -->
+    <networkTable>F:\dpi\public.txt</networkTable>
+
+    <!-- redis服务器IP地址 -->
+    <redisAddr>192.168.2.142</redisAddr>
+    <!-- redis服务器连接用户名 -->
+    <redisUser>tmc</redisUser>
+    <!-- redis服务器连接密码 -->
+    <redisPassword>123456</redisPassword>
+
+    <!-- UDP发送端本地端口Port -->
+    <sendLocalPort>9000</sendLocalPort>
+    <!-- UDP发送端发送端口Port -->
+    <sendPort>8080</sendPort>
+    <!-- UDP发送端发送IP地址 -->
+    <sendIPAddr>127.0.0.1</sendIPAddr>
+
+    <!-- UDP接收端监听端口Port -->
+    <recListenPort>8090</recListenPort>
+    <!-- UDP接收端缓冲区大小（字节） -->
+    <recBufferSize>1024</recBufferSize>
+</config>

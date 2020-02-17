@@ -1,0 +1,68 @@
+package com.tuoming.entity.s1mme;
+
+public interface PagingIndex {
+
+    int sdrType = 8;
+    int enodeb_ip=29;
+    int enodeb_port=31;
+    int mme_ip=28;
+    int mme_port=30;
+    int mme_ue_s1ap_id=18;
+    int enb_ue_s1ap_id=42;
+    int direction=8;
+    int srvorig = 39;
+    int pg_id_type=14;
+    int srvtype=14;
+    int csfb_res=46;
+    int mme_groupid=22;
+    int mme_code=23;
+    int m_tmsi=24;
+    int tac=32;
+    int eci=33;
+    int tai_list1=32;
+//    int tai_list2=1;
+//    int tai_list3=1;
+//    int tai_list4=1;
+    int pag_drx=45;
+    int erab_num=37;
+    int erabid_req=38;
+    int rabqos_req=55;
+    int sgw_gtp_ip=56;
+    int sgw_gtp_teid=45;
+    int erabid_res=65;
+    int rab_fillist=68;
+    int enb_gtp_ip=57;
+    int enb_gtp_teid=44;
+    int paging_time=9;
+    int pag1st_t=90;
+    int pag2nd_t=91;
+    int pag3rd_t=92;
+    int req_time = 10;
+    int rej_time1=11;
+    int rej_time2=10;
+    int auth_time=9;
+    int auth_failure=10;
+    int cause=13;
+    int au_end_time=10;
+    int cip_time=9;
+    int cip_end_time=10;
+    int ini_set_time=9;
+    int rsp_time=10;
+    int erab_cause=13;
+    int context_rel_time=69;
+    int req_cause=70;
+    int contxt_rl_time=9;
+    int release_cause=12;
+    int comp_time=10;
+    int res_time=11;
+//    int msg_id=1;
+    int cause_code=13;
+    int rand=58;
+    int autn=59;
+    int paging_time_window=81;
+    int edrx_value=82;
+//    int adfp=1;
+    int t3346=75;
+    int gnb_gtp_ip=102;
+
+}
